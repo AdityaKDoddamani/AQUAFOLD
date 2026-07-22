@@ -1,193 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products — Aquafold</title>
   <link rel="icon" type="image/png" href="/images/globe.png" />
-  <meta name="description" content="Aquafold product roadmap featuring tableware, molded fiber bottles, and future sustainable packaging categories." />
+  <meta name="description"
+    content="Aquafold product roadmap featuring tableware, molded fiber bottles, and future sustainable packaging categories." />
 
   <style>
     :root {
-      --bg:#f6faf7;
-      --surface:#ffffff;
-      --surface-2:#eef7f0;
-      --text:#132219;
-      --muted:#50685a;
-      --line:#d9e6de;
-      --green:#1f7a3a;
-      --green-dark:#165a2b;
-      --blue:#0b5a88;
-      --radius:22px;
-      --shadow:0 18px 40px rgba(12,40,24,.08);
-      --max:1180px;
-      --dark-1:#001f1d;
-      --dark-2:#002c36;
-      --dark-3:#001926;
+      --bg: #f6faf7;
+      --surface: #ffffff;
+      --surface-2: #eef7f0;
+      --text: #132219;
+      --muted: #50685a;
+      --line: #d9e6de;
+      --green: #1f7a3a;
+      --green-dark: #165a2b;
+      --blue: #0b5a88;
+      --radius: 22px;
+      --shadow: 0 18px 40px rgba(12, 40, 24, .08);
+      --max: 1180px;
+      --dark-1: #001f1d;
+      --dark-2: #002c36;
+      --dark-3: #001926;
     }
 
-    *{margin:0;padding:0;box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-
-    body{
-      background:var(--bg);
-      color:var(--text);
-      font-family:Inter,ui-sans-serif,system-ui,sans-serif;
-      line-height:1.7;
-      overflow-x:hidden;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    a{text-decoration:none;color:inherit;}
-
-    .container{
-      width:min(var(--max), calc(100% - 36px));
-      margin:0 auto;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .nav{
-      position:sticky;
-      top:0;
-      z-index:999;
-      background:#0B1F33;
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid rgba(255,255,255,.08);
-      box-shadow:0 12px 36px rgba(0,0,0,.18);
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    .nav-inner{
-      min-height:76px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .brand{
-      color:#fff;
-      font-weight:800;
-      letter-spacing:.12em;
-      font-size:1rem;
+    .container {
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
     }
 
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:22px;
-      flex-wrap:wrap;
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #0B1F33;
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, .18);
     }
 
-    .nav-links a{
-      color:rgba(255,255,255,.72);
-      font-size:.95rem;
-      transition:.25s ease;
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: .12em;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, .72);
+      font-size: .95rem;
+      transition: .25s ease;
     }
 
     .nav-links a:hover,
-    .nav-links a.active{
-      color:#fff;
-      transform:translateY(-1px);
+    .nav-links a.active {
+      color: #fff;
+      transform: translateY(-1px);
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      padding:0 22px;
-      border-radius:999px;
-      font-weight:700;
-      transition:.3s ease;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: .3s ease;
     }
 
-    .btn-primary{
-      background:rgba(255,255,255,.1);
-      color:#fff;
-      border:1px solid rgba(255,255,255,.14);
-      backdrop-filter:blur(10px);
+    .btn-primary {
+      background: rgba(255, 255, 255, .1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, .14);
+      backdrop-filter: blur(10px);
     }
 
-    .btn-primary:hover{
-      transform:translateY(-2px);
-      background:rgba(255,255,255,.16);
-      box-shadow:0 14px 32px rgba(0,0,0,.18);
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, .16);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, .18);
     }
 
-    .btn-secondary{
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--text);
+    .btn-secondary {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
     }
 
-    .btn-secondary:hover{
-      transform:translateY(-2px);
-      border-color:var(--green);
-      color:var(--green-dark);
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      border-color: var(--green);
+      color: var(--green-dark);
     }
 
-    section{padding:88px 0;position:relative;}
-
-    .hero{
-      padding:110px 0 80px;
-      overflow:hidden;
+    section {
+      padding: 88px 0;
+      position: relative;
     }
 
-    .hero::before{
-      content:"";
-      position:absolute;
-      right:-120px;
-      top:-80px;
-      width:520px;
-      height:520px;
-      border-radius:50%;
-      background:radial-gradient(circle,rgba(31,122,58,.09),transparent 72%);
+    .hero {
+      padding: 110px 0 80px;
+      overflow: hidden;
     }
 
-    .hero-grid,.grid-2,.grid-3,.gallery-grid{
-      display:grid;
-      gap:32px;
-      align-items:center;
+    .hero::before {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -80px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(31, 122, 58, .09), transparent 72%);
     }
 
-    .hero-grid{grid-template-columns:1.1fr .9fr;}
-    .grid-2{grid-template-columns:1fr 1fr;}
-    .grid-3{grid-template-columns:repeat(3,1fr);}
-    .gallery-grid {grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));}
-
-    .eyebrow{
-      display:inline-flex;
-      padding:8px 14px;
-      border-radius:999px;
-      background:var(--surface-2);
-      color:var(--green-dark);
-      font-size:.78rem;
-      letter-spacing:.1em;
-      font-weight:700;
-      text-transform:uppercase;
-      margin-bottom:20px;
+    .hero-grid,
+    .grid-2,
+    .grid-3,
+    .gallery-grid {
+      display: grid;
+      gap: 32px;
+      align-items: center;
     }
 
-    h1,h2,h3{line-height:1.1;margin-bottom:18px;}
-    h1{font-size:clamp(3rem,5vw,5.4rem);max-width:10ch;}
-    h2{font-size:clamp(2rem,3vw,2.8rem);}
-    h3{font-size:1.22rem;}
-
-    p{color:var(--muted);margin-bottom:16px;}
-
-    .section-head{max-width:760px;margin-bottom:34px;}
-
-    .card,.image-box,.highlight{
-      background:var(--surface);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      transition:.35s ease;
+    .hero-grid {
+      grid-template-columns: 1.1fr .9fr;
     }
 
-    .card,.highlight{padding:28px;}
+    .grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
 
-    .card:hover,.image-box:hover,.highlight:hover{
-      transform:translateY(-8px);
-      box-shadow:0 28px 60px rgba(10,40,24,.12);
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--green-dark);
+      font-size: .78rem;
+      letter-spacing: .1em;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 5vw, 5.4rem);
+      max-width: 10ch;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    h3 {
+      font-size: 1.22rem;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .card,
+    .image-box,
+    .highlight {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: .35s ease;
+    }
+
+    .card,
+    .highlight {
+      padding: 28px;
+    }
+
+    .card:hover,
+    .image-box:hover,
+    .highlight:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 60px rgba(10, 40, 24, .12);
     }
 
     /* Prevent the hover transform context from breaking fixed children */
@@ -195,169 +252,188 @@
       transform: none !important;
     }
 
-    .image-box{
-      min-height:320px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:24px;
-      color:var(--muted);
-      background:linear-gradient(145deg,#f1f8f3,#ffffff 60%,#edf6fb);
-      position:relative;
-      overflow:hidden;
+    .image-box {
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      background: linear-gradient(145deg, #f1f8f3, #ffffff 60%, #edf6fb);
+      position: relative;
+      overflow: hidden;
     }
 
-    .image-box::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);
-      transform:translateX(-120%);
-      transition:1.2s ease;
+    .image-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .45), transparent);
+      transform: translateX(-120%);
+      transition: 1.2s ease;
     }
 
-    .image-box:hover::before{transform:translateX(120%);}
-
-    .image-box.tall{min-height:450px;}
-    .image-box.small{min-height:230px;}
-
-    .bullet-list{
-      margin-top:14px;
-      padding-left:18px;
-      color:var(--muted);
+    .image-box:hover::before {
+      transform: translateX(120%);
     }
 
-    .bullet-list li{margin-bottom:8px;}
-
-    .cta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:24px;
+    .image-box.tall {
+      min-height: 450px;
     }
 
-    .highlight{border-left:4px solid var(--blue);}
-
-    .footer{
-      margin-top:60px;
-      background:#0B1F33;
-      border-top:1px solid rgba(255,255,255,.08);
-      color:#e7f5ef;
+    .image-box.small {
+      min-height: 230px;
     }
 
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1.4fr 1fr 1fr 1fr;
-      gap:48px;
-      padding:80px 0 56px;
+    .bullet-list {
+      margin-top: 14px;
+      padding-left: 18px;
+      color: var(--muted);
     }
 
-    .footer-brand p{
-      color:rgba(231,245,239,.72);
-      max-width:300px;
+    .bullet-list li {
+      margin-bottom: 8px;
     }
 
-    .footer-social{
-      display:flex;
-      gap:12px;
-      margin-top:28px;
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
     }
 
-    .social-circle{
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      color:#fff;
-      transition:.3s ease;
-      overflow:hidden;
-      flex-shrink:0;
+    .highlight {
+      border-left: 4px solid var(--blue);
+    }
+
+    .footer {
+      margin-top: 60px;
+      background: #0B1F33;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      color: #e7f5ef;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding: 80px 0 56px;
+    }
+
+    .footer-brand p {
+      color: rgba(231, 245, 239, .72);
+      max-width: 300px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .social-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      color: #fff;
+      transition: .3s ease;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
     .social-circle img {
-      display:block;
-      width:auto;
-      height:auto;
-      max-width:32px;
-      max-height:32px;
-      object-fit:contain;
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 32px;
+      max-height: 32px;
+      object-fit: contain;
     }
 
-    .social-circle:hover{
-      transform:translateY(-4px);
-      background:rgba(255,255,255,.12);
+    .social-circle:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, .12);
     }
 
-    .footer-col h4{
-      color:#fff;
-      font-size:.95rem;
-      letter-spacing:.08em;
-      margin-bottom:22px;
-      text-transform:uppercase;
+    .footer-col h4 {
+      color: #fff;
+      font-size: .95rem;
+      letter-spacing: .08em;
+      margin-bottom: 22px;
+      text-transform: uppercase;
     }
 
-    .footer-col a{
-      display:block;
-      color:rgba(231,245,239,.72);
-      margin-bottom:14px;
-      transition:.25s ease;
+    .footer-col a {
+      display: block;
+      color: rgba(231, 245, 239, .72);
+      margin-bottom: 14px;
+      transition: .25s ease;
     }
 
-    .footer-col a:hover{
-      color:#fff;
-      transform:translateX(4px);
+    .footer-col a:hover {
+      color: #fff;
+      transform: translateX(4px);
     }
 
-    .footer-bottom{
-      border-top:1px solid rgba(255,255,255,.08);
-      padding:30px 0 36px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-      color:rgba(231,245,239,.64);
-      font-size:.92rem;
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding: 30px 0 36px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: rgba(231, 245, 239, .64);
+      font-size: .92rem;
     }
 
     /* ── Hamburger button ── */
-    .nav-toggle{
-      display:none;
-      flex-direction:column;
-      justify-content:center;
-      gap:5px;
-      width:40px;
-      height:40px;
-      background:none;
-      border:none;
-      cursor:pointer;
-      padding:4px;
-      flex-shrink:0;
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-shrink: 0;
     }
 
-    .nav-toggle span{
-      display:block;
-      height:2px;
-      width:100%;
-      background:#fff;
-      border-radius:2px;
-      transition:transform .3s ease, opacity .3s ease;
+    .nav-toggle span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease;
     }
 
-    .nav-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2){ opacity:0; }
-    .nav-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+    .nav-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
 
-    a.btn.btn-primary{
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    a.btn.btn-primary {
       color: white;
       background-color: #014226;
     }
 
-    a.btn.btn-secondary{
+    a.btn.btn-secondary {
       color: white;
       background-color: #014226;
     }
@@ -366,32 +442,38 @@
        RESPONSIVE — TABLET (980px)
     ══════════════════════════════════════════ */
     @media (max-width: 980px) {
+
       /* Hero collapses to 1-col: text first, image second */
       .hero-grid {
         grid-template-columns: 1fr;
         gap: 24px;
       }
+
       /* 2-col layouts stay 2-col — readable at tablet */
       .grid-2 {
         grid-template-columns: 1fr 1fr;
         gap: 24px;
       }
+
       /* 3-col → 2-col at tablet */
       .grid-3 {
         grid-template-columns: 1fr 1fr;
         gap: 24px;
       }
+
       /* Gallery stays auto-fit — naturally 2-col at tablet */
       .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 20px;
       }
+
       /* Footer 2-col */
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
         padding: 52px 0 36px;
       }
+
       .hero {
         padding: 72px 0 52px;
       }
@@ -401,8 +483,10 @@
        RESPONSIVE — MOBILE (720px)
     ══════════════════════════════════════════ */
     @media (max-width: 720px) {
+
       /* Prevent all horizontal overflow */
-      html, body {
+      html,
+      body {
         overflow-x: hidden;
         max-width: 100vw;
       }
@@ -413,7 +497,9 @@
       }
 
       /* ── Nav ── */
-      .nav-toggle { display: flex; }
+      .nav-toggle {
+        display: flex;
+      }
 
       .nav-inner {
         flex-wrap: wrap;
@@ -432,12 +518,14 @@
         padding: 4px 0 14px;
       }
 
-      .nav-links.open { display: flex; }
+      .nav-links.open {
+        display: flex;
+      }
 
       .nav-links a {
         width: 100%;
         padding: 13px 6px;
-        border-bottom: 1px solid rgba(255,255,255,.07);
+        border-bottom: 1px solid rgba(255, 255, 255, .07);
         font-size: 1rem;
       }
 
@@ -458,6 +546,7 @@
         width: 90px !important;
         height: auto !important;
       }
+
       .footer-brand .brand img,
       .footer-brand a img {
         width: 140px !important;
@@ -483,6 +572,7 @@
       .hero {
         padding: 48px 0 36px;
       }
+
       .hero::before {
         display: none;
       }
@@ -493,10 +583,12 @@
         max-width: 100%;
         line-height: 1.15;
       }
+
       h2 {
         font-size: clamp(1.5rem, 5.5vw, 2rem);
         line-height: 1.15;
       }
+
       h3 {
         font-size: 1.08rem;
       }
@@ -507,8 +599,14 @@
         min-height: 200px;
         padding: 12px;
       }
-      .image-box.tall { min-height: 240px; }
-      .image-box.small { min-height: 160px; }
+
+      .image-box.tall {
+        min-height: 240px;
+      }
+
+      .image-box.small {
+        min-height: 160px;
+      }
 
       /* All images inside image-box fill width, never overflow */
       .image-box img,
@@ -540,7 +638,7 @@
       }
 
       /* Cards stacked inside grid-2 sections — add spacing */
-      .grid-2 > div > .card + .card {
+      .grid-2>div>.card+.card {
         margin-top: 14px !important;
       }
 
@@ -550,6 +648,7 @@
         align-items: stretch;
         gap: 10px;
       }
+
       .cta-row .btn {
         width: 100%;
         text-align: center;
@@ -562,7 +661,11 @@
         gap: 28px;
         padding: 40px 0 20px;
       }
-      .footer-brand p { max-width: 100%; }
+
+      .footer-brand p {
+        max-width: 100%;
+      }
+
       .footer-bottom {
         flex-direction: column;
         gap: 8px;
@@ -621,27 +724,39 @@
       .container {
         width: calc(100% - 24px);
       }
-      h1 { font-size: 1.9rem; }
-      h2 { font-size: 1.4rem; }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
       .btn {
         font-size: .9rem;
         padding: 0 18px;
         min-height: 48px;
       }
+
       .card,
       .highlight {
         padding: 16px;
       }
+
       /* On very small screens, gallery → single column */
       .gallery-grid {
         grid-template-columns: 1fr;
       }
+
       .image-box.small {
         min-height: 200px;
       }
+
       .popup-thumb-side img {
         max-height: 120px !important;
       }
+
       .popup-details-side h4 {
         font-size: 1.25rem;
       }
@@ -663,17 +778,20 @@
       font-family: inherit;
       border: none;
       cursor: pointer;
-      box-shadow: 0 8px 24px rgba(11,90,136,.22);
+      box-shadow: 0 8px 24px rgba(11, 90, 136, .22);
       transition: transform .28s ease, box-shadow .28s ease, background .28s ease;
       letter-spacing: .02em;
     }
+
     .know-more-btn:hover {
       transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 16px 36px rgba(11,90,136,.3);
+      box-shadow: 0 16px 36px rgba(11, 90, 136, .3);
     }
+
     .know-more-btn:active {
       transform: translateY(0) scale(.98);
     }
+
     .know-more-icon,
     .know-more-arrow {
       display: flex;
@@ -688,19 +806,21 @@
       position: fixed;
       inset: 0;
       z-index: 1200;
-      background: rgba(10,30,20,.52);
+      background: rgba(10, 30, 20, .52);
       backdrop-filter: blur(6px);
       align-items: center;
       justify-content: center;
       padding: 20px;
     }
+
     .modal-overlay.open {
       display: flex;
     }
+
     .modal-card {
       background: #fff;
       border-radius: 28px;
-      box-shadow: 0 32px 80px rgba(10,30,20,.22);
+      box-shadow: 0 32px 80px rgba(10, 30, 20, .22);
       width: 100%;
       max-width: 520px;
       max-height: 90vh;
@@ -709,10 +829,19 @@
       position: relative;
       animation: modalSlideIn .32s ease;
     }
+
     @keyframes modalSlideIn {
-      from { opacity:0; transform:translateY(24px) scale(.97); }
-      to   { opacity:1; transform:translateY(0) scale(1); }
+      from {
+        opacity: 0;
+        transform: translateY(24px) scale(.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
+
     .modal-close {
       position: absolute;
       top: 18px;
@@ -731,16 +860,20 @@
       justify-content: center;
       transition: .2s ease;
     }
+
     .modal-close:hover {
       background: var(--surface-2);
       color: var(--text);
     }
+
     .modal-header {
       margin-bottom: 28px;
     }
+
     .modal-field {
       margin-bottom: 18px;
     }
+
     .modal-label {
       display: block;
       font-size: .85rem;
@@ -749,7 +882,11 @@
       margin-bottom: 7px;
       letter-spacing: .01em;
     }
-    .modal-label .req { color: #b91c1c; }
+
+    .modal-label .req {
+      color: #b91c1c;
+    }
+
     .modal-card input,
     .modal-card select {
       width: 100%;
@@ -763,12 +900,14 @@
       transition: .25s ease;
       appearance: auto;
     }
+
     .modal-card input:focus,
     .modal-card select:focus {
       outline: none;
       border-color: var(--green);
-      box-shadow: 0 0 0 4px rgba(31,122,58,.08);
+      box-shadow: 0 0 0 4px rgba(31, 122, 58, .08);
     }
+
     .form-status {
       min-height: 28px;
       font-size: .88rem;
@@ -778,15 +917,26 @@
       margin-bottom: 8px;
       transition: .3s ease;
     }
-    .form-status.success { color: #1a6b34; }
-    .form-status.error   { color: #b91c1c; }
-    .btn:disabled { opacity: .55; cursor: not-allowed; }
+
+    .form-status.success {
+      color: #1a6b34;
+    }
+
+    .form-status.error {
+      color: #b91c1c;
+    }
+
+    .btn:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+    }
 
     @media (max-width: 560px) {
       .modal-card {
         padding: 28px 20px 24px;
         border-radius: 20px;
       }
+
       .know-more-btn {
         font-size: .93rem;
         padding: 13px 24px;
@@ -795,41 +945,47 @@
 
 
     .modal-card .btn-primary {
-  background: #014226;
-  color: #fff;
-  border: none;
-  box-shadow: 0 6px 20px rgba(31,122,58,.25);
-}
+      background: #014226;
+      color: #fff;
+      border: none;
+      box-shadow: 0 6px 20px rgba(31, 122, 58, .25);
+    }
 
-.modal-card .btn-primary:hover {
-  background: #014226;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(31,122,58,.3);
-}
+    .modal-card .btn-primary:hover {
+      background: #014226;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(31, 122, 58, .3);
+    }
 
     /* ══════════════════════════════════════════
        TOUCH DEVICE — DISABLE HOVER LIFTS
     ══════════════════════════════════════════ */
     @media (hover: none) {
+
       .card:hover,
       .highlight:hover,
       .image-box:hover {
         transform: none;
         box-shadow: var(--shadow);
       }
+
       .btn-primary:hover,
       .btn-secondary:hover {
         transform: none;
       }
+
       .social-circle:hover {
         transform: none;
       }
+
       .footer-col a:hover {
         transform: none;
       }
+
       .nav-links a:hover {
         transform: none;
       }
+
       /* Gallery items: touch hover shimmer off */
       .image-box.small:hover::before {
         transform: translateX(-120%);
@@ -858,7 +1014,7 @@
       pointer-events: none;
     }
 
-    body.loading > *:not(#preloader) {
+    body.loading>*:not(#preloader) {
       visibility: hidden;
     }
 
@@ -897,7 +1053,7 @@
     .earth p .text-fold {
       color: #1f7a3a;
     }
-    
+
     .earth-loader svg:nth-child(1) {
       position: absolute;
       bottom: -2em;
@@ -931,8 +1087,16 @@
     }
 
     @keyframes startround {
-      0% { filter: brightness(500%); box-shadow: none; }
-      75% { filter: brightness(500%); box-shadow: none; }
+      0% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
+      75% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
       100% {
         filter: brightness(100%);
         box-shadow:
@@ -942,21 +1106,69 @@
     }
 
     @keyframes round1 {
-      0%  { left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      30% { left: -6em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      31% { left: -6em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      35% { left: 7em;  opacity: 0%;   transform: skewX(25deg) rotate(-25deg); }
-      45% { left: 7em;  opacity: 100%; transform: skewX(25deg) rotate(-25deg); }
-      100%{ left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
+      0% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+
+      30% {
+        left: -6em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      31% {
+        left: -6em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      35% {
+        left: 7em;
+        opacity: 0%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      45% {
+        left: 7em;
+        opacity: 100%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      100% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
     }
 
     @keyframes round2 {
-      0%  { left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      75% { left: -7em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      76% { left: -7em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      100% { left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
+      0% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+
+      75% {
+        left: -7em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      76% {
+        left: -7em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      100% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
     }
-      
+
     /* ══════════════════════════════════════════
        FULL SCREEN OVERLAPPING MODAL SYSTEM
     ══════════════════════════════════════════ */
@@ -971,15 +1183,16 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(246, 250, 247, 0.518) !important; /* Clean Opaque Cover */
+      background: rgba(246, 250, 247, 0.518) !important;
+      /* Clean Opaque Cover */
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: 10000;
-      
+
       /* CRITICAL FIX: Stops the popup window from intercepting cursor hover tracking loops */
-      pointer-events: none; 
-      
+      pointer-events: none;
+
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -1051,6 +1264,7 @@
         opacity: 1;
         visibility: visible;
       }
+
       .image-box.small:hover .popup-inner-card {
         transform: scale(1) translateY(0);
       }
@@ -1061,613 +1275,645 @@
       opacity: 1;
       visibility: visible;
     }
+
     .image-box.small.popup-active .popup-inner-card {
       transform: scale(1) translateY(0);
     }
   </style>
 </head>
+
 <body class="loading">
 
-<div id="preloader">
-  <div class="earth">
-    <div class="earth-loader">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z" fill="#ffffff"></path>
-      </svg>
-    </div>
-<p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>  </div>
-</div>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;"><img src="/images/aquafoldlogo.png" alt="Aquafold" width="130" style="flex-shrink:0;"></a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="aboutus.html">About us</a>
-      <a href="features.html">Features</a>
-      <a href="products.html" class="active">Products</a>
-      <a href="technology.html">Technology</a>
-      <a href="work-with-us.html">Work With Us</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">Products</span>
-      <h2>Packaging categories built around practical adoption.</h2>
-
-      <p>
-        Aquafold products are structured around a phased roadmap. Early categories
-        focus on commercial viability, while future formats extend into broader
-        packaging markets.
-      </p>
-
-      <div class="cta-row">
-        <a href="work-with-us.html#partnerships" class="btn btn-primary">Start Pilot Discussion</a>
-        <a href="technology.html" class="btn btn-secondary">See Technology</a>
+  <div id="preloader">
+    <div class="earth">
+      <div class="earth-loader">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z"
+            fill="#ffffff"></path>
+        </svg>
       </div>
-    </div>
-
-    <div class="image-box tall">
-      <img src="/images/11th image.png" alt="product" height="500" >
+      <p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>
     </div>
   </div>
-</section>
 
-<section>
-  <div class="container">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;"><img
+          src="/images/aquafoldlogo.png" alt="Aquafold" width="130" style="flex-shrink:0;"></a>
 
-    <div class="section-head">
-      <span class="eyebrow">Current Products</span>
-      <h2>Near-term packaging categories designed for food-service adoption.</h2>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="aboutus.html">About us</a>
+        <a href="features.html">Features</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="technology.html">Technology</a>
+        <a href="work-with-us.html">Work With Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Products</span>
+          <h2>Packaging categories built around practical adoption.</h2>
+
+          <p>
+            Aquafold products are structured around a phased roadmap. Early categories
+            focus on commercial viability, while future formats extend into broader
+            packaging markets.
+          </p>
+
+          <div class="cta-row">
+            <a href="work-with-us.html#partnerships" class="btn btn-primary">Start Pilot Discussion</a>
+            <a href="technology.html" class="btn btn-secondary">See Technology</a>
+          </div>
+        </div>
+
+        <div class="image-box tall">
+          <img src="/images/11th image.png" alt="product" height="500">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Current Products</span>
+          <h2>Near-term packaging categories designed for food-service adoption.</h2>
+        </div>
+
+        <div class="grid-3">
+
+          <article class="card">
+            <h3>Round Plates</h3>
+            <p>Food-service tableware designed for dine-in and takeaway use.</p>
+            <ul class="bullet-list">
+              <li>6", 8", and 10" formats</li>
+              <li>Microwave-compatible</li>
+              <li>Oil-resistant direction</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Compartment Trays</h3>
+            <p>Multi-section containers for meal separation and delivery workflows.</p>
+            <ul class="bullet-list">
+              <li>3-section and 4-section</li>
+              <li>Meal-combo applications</li>
+              <li>Stacking compatibility</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Takeaway Containers</h3>
+            <p>Designed for curries, noodles, rice bowls, and liquid-heavy meals.</p>
+            <ul class="bullet-list">
+              <li>500ml–1000ml range</li>
+              <li>Delivery-focused structure</li>
+              <li>High-volume category</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="gallery-grid">
+
+          <div class="image-box small">
+            <img src="new/The carry.png" alt="photo" width="225">
+            <div class="prod-popup">
+              <div class="popup-inner-card">
+                <div class="popup-thumb-side">
+                  <img src="new/The carry.png" alt="preview">
+                </div>
+                <div class="popup-details-side">
+                  <h4>The Carry</h4>
+                  <p>Smart Portioning. Effortless Convenience. <br>
+                    Designed for meals that travel well and present beautifully. The Carry combines functionality,
+                    durability, and thoughtful compartment design for modern food service applications. Available in
+                    industry-standard capacities and dimensions. Custom sizes, compartment layouts, and configurations
+                    can be developed to meet your exact requirements.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-box small">
+            <img src="new/The gather.png" alt="photo" width="190">
+            <div class="prod-popup">
+              <div class="popup-inner-card">
+                <div class="popup-thumb-side">
+                  <img src="new/The gather.png" alt="preview">
+                </div>
+                <div class="popup-details-side">
+                  <h4>The Gather</h4>
+                  <p>Made for Sharing. <br>
+                    Designed to bring people together around food. The Gather collection offers versatile serving
+                    solutions that balance form, convenience, and performance.
+                    Available in industry-standard capacities and dimensions. Custom sizes and configurations can be
+                    developed to meet your exact requirements.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-box small">
+            <img src="new/The pour.png" alt="photo" width="225">
+            <div class="prod-popup">
+              <div class="popup-inner-card">
+                <div class="popup-thumb-side">
+                  <img src="new/The pour.png" alt="preview">
+                </div>
+                <div class="popup-details-side">
+                  <h4>The Pour</h4>
+                  <p>Designed to Flow Naturally. <br>
+                    Crafted for products that require precision, ease of handling, and a seamless user experience. The
+                    Pour delivers practicality with a refined design language. Available in industry-standard capacities
+                    and dimensions. Custom sizes and configurations can be developed to meet your exact requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-box small">
+            <img src="new/The serve.png" alt="photo" width="190">
+            <div class="prod-popup">
+              <div class="popup-inner-card">
+                <div class="popup-thumb-side">
+                  <img src="new/The serve.png" alt="preview">
+                </div>
+                <div class="popup-details-side">
+                  <h4>The Serve</h4>
+                  <p>Presentation Meets Purpose. <br>
+                    A collection of thoughtfully designed plates that elevate every serving experience. Built for
+                    strength, functionality, and visual appeal across food service environments.
+                    Available in industry-standard capacities and dimensions. Custom sizes and configurations can be
+                    developed to meet your exact requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-box small">
+            <img src="new/The vessel.png" alt="photo" width="190">
+            <div class="prod-popup">
+              <div class="popup-inner-card">
+                <div class="popup-thumb-side">
+                  <img src="new/The vessel.png" alt="preview">
+                </div>
+                <div class="popup-details-side">
+                  <h4>The Vessel</h4>
+                  <p>The Future of Sustainable Bottles. <br>
+                    Currently in development, The Vessel represents our vision for next-generation fiber-based
+                    packaging. Designed to combine sustainability, functionality, and premium aesthetics while reducing
+                    dependence on conventional plastics.
+                    Available in industry-standard capacities and dimensions. Custom sizes and configurations can be
+                    developed to meet your exact requirements.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── Know More CTA ── -->
+        <div style="display:flex;justify-content:center;margin-top:36px;">
+          <button id="knowMoreBtn" class="know-more-btn" aria-label="Know more about our products">
+            <span class="know-more-icon">
+              <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8h.01M12 12v4"/></svg> -->
+            </span>
+            Know More
+            <span class="know-more-arrow">
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+     PRODUCT INQUIRY MODAL
+══════════════════════════════════════════ -->
+    <div id="productInquiryModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-card">
+        <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+
+        <div class="modal-header">
+          <span class="eyebrow" style="margin-bottom:10px;">Product Enquiry</span>
+          <h3 id="modalTitle" style="margin-bottom:6px;">Get to Know Our Products</h3>
+          <p style="margin:0;font-size:.93rem;">Tell us a little about yourself and we'll get in touch with detailed
+            specs and samples.</p>
+        </div>
+
+        <form id="form-product-inquiry" novalidate>
+
+          <div class="modal-field">
+            <label class="modal-label" for="pi-name">Full Name <span class="req">*</span></label>
+            <input type="text" id="pi-name" placeholder="e.g. Priya Sharma" required autocomplete="name" />
+          </div>
+
+          <div class="modal-field">
+            <label class="modal-label" for="pi-email">Email Address <span class="req">*</span></label>
+            <input type="email" id="pi-email" placeholder="you@company.com" required autocomplete="email" />
+          </div>
+
+          <div class="modal-field">
+            <label class="modal-label" for="pi-phone">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="pi-phone" placeholder="+91 98765 43210" required autocomplete="tel" />
+          </div>
+
+          <div class="modal-field">
+            <label class="modal-label" for="pi-product">Product of Interest <span class="req">*</span></label>
+            <select id="pi-product" required>
+              <option value="" disabled selected>— Select a product —</option>
+              <option value="The Carry">The Carry — Clamshell &amp; Compartment Boxes</option>
+              <option value="The Gather">The Gather — Bowls &amp; Serving Vessels</option>
+              <option value="The Pour">The Pour — Beverage Holders &amp; Cup Carriers</option>
+              <option value="The Serve">The Serve — Plates &amp; Presentation Ware</option>
+              <option value="The Vessel">The Vessel — Sustainable Fiber Bottles</option>
+            </select>
+          </div>
+
+          <div id="pi-status" class="form-status"></div>
+
+          <button class="btn btn-primary" type="submit"
+            style="width:100%;margin-top:4px;min-height:52px;font-size:1rem;">
+            Send Enquiry
+          </button>
+        </form>
+      </div>
     </div>
 
-    <div class="grid-3">
+    <section>
+      <div class="container">
 
-      <article class="card">
-        <h3>Round Plates</h3>
-        <p>Food-service tableware designed for dine-in and takeaway use.</p>
-        <ul class="bullet-list">
-          <li>6", 8", and 10" formats</li>
-          <li>Microwave-compatible</li>
-          <li>Oil-resistant direction</li>
-        </ul>
-      </article>
+        <div class="grid-2">
 
-      <article class="card">
-        <h3>Compartment Trays</h3>
-        <p>Multi-section containers for meal separation and delivery workflows.</p>
-        <ul class="bullet-list">
-          <li>3-section and 4-section</li>
-          <li>Meal-combo applications</li>
-          <li>Stacking compatibility</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Takeaway Containers</h3>
-        <p>Designed for curries, noodles, rice bowls, and liquid-heavy meals.</p>
-        <ul class="bullet-list">
-          <li>500ml–1000ml range</li>
-          <li>Delivery-focused structure</li>
-          <li>High-volume category</li>
-        </ul>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="gallery-grid" >
-      
-      <div class="image-box small">
-        <img src="new/The carry.png" alt="photo" width="225">
-        <div class="prod-popup">
-          <div class="popup-inner-card">
-            <div class="popup-thumb-side">
-              <img src="new/The carry.png" alt="preview">
-            </div>
-            <div class="popup-details-side">
-              <h4>The Carry</h4>
-              <p>Smart Portioning. Effortless Convenience. <br>
-              Designed for meals that travel well and present beautifully. The Carry combines functionality, durability, and thoughtful compartment design for modern food service applications. Available in industry-standard capacities and dimensions. Custom sizes, compartment layouts, and configurations can be developed to meet your exact requirements.</p>
-            </div>
+          <div class="image-box product">
+            <img src="/images/16th image.png" alt="product" height="380">
           </div>
-        </div>
-      </div>
 
-      <div class="image-box small">
-        <img src="new/The gather.png" alt="photo" width="190">
-        <div class="prod-popup">
-          <div class="popup-inner-card">
-            <div class="popup-thumb-side">
-              <img src="new/The gather.png" alt="preview">
-            </div>
-            <div class="popup-details-side">
-              <h4>The Gather</h4>
-              <p>Made for Sharing. <br>
-              Designed to bring people together around food. The Gather collection offers versatile serving solutions that balance form, convenience, and performance.
-              Available in industry-standard capacities and dimensions. Custom sizes and configurations can be developed to meet your exact requirements.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+          <div>
+            <span class="eyebrow">Use Cases</span>
+            <h2>Built for operational packaging environments.</h2>
 
-      <div class="image-box small">
-        <img src="new/The pour.png" alt="photo" width="225">
-        <div class="prod-popup">
-          <div class="popup-inner-card">
-            <div class="popup-thumb-side">
-              <img src="new/The pour.png" alt="preview">
+            <div class="card">
+              <h3>Food Delivery Platforms</h3>
+              <p>
+                Packaging designed for transport windows, stacking, and liquid retention.
+              </p>
             </div>
-            <div class="popup-details-side">
-              <h4>The Pour</h4>
-              <p>Designed to Flow Naturally. <br>
-              Crafted for products that require precision, ease of handling, and a seamless user experience. The Pour delivers practicality with a refined design language. Available in industry-standard capacities and dimensions. Custom sizes and configurations can be developed to meet your exact requirements.</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="image-box small">
-        <img src="new/The serve.png" alt="photo" width="190">
-        <div class="prod-popup">
-          <div class="popup-inner-card">
-            <div class="popup-thumb-side">
-              <img src="new/The serve.png" alt="preview">
+            <div class="card" style="margin-top:18px;">
+              <h3>Q-Commerce & Dark Stores</h3>
+              <p>
+                Fast-moving fulfillment operations requiring repeatable packaging quality.
+              </p>
             </div>
-            <div class="popup-details-side">
-              <h4>The Serve</h4>
-              <p>Presentation Meets Purpose. <br>
-              A collection of thoughtfully designed plates that elevate every serving experience. Built for strength, functionality, and visual appeal across food service environments.
-              Available in industry-standard capacities and dimensions. Custom sizes and configurations can be developed to meet your exact requirements.
+
+            <div class="card" style="margin-top:18px;">
+              <h3>Hotels & Catering</h3>
+              <p>
+                Bulk-service packaging categories for hospitality and HORECA operations.
               </p>
             </div>
           </div>
+
         </div>
       </div>
+    </section>
 
-      <div class="image-box small">
-        <img src="new/The vessel.png" alt="photo" width="190">
-        <div class="prod-popup">
-          <div class="popup-inner-card">
-            <div class="popup-thumb-side">
-              <img src="new/The vessel.png" alt="preview">
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Flagship Development</span>
+          <h2>The molded fiber bottle represents long-term packaging expansion.</h2>
+        </div>
+
+        <div class="grid-2">
+
+          <div>
+            <div class="card">
+              <h3>Molded Fiber Bottle</h3>
+              <p>
+                A future-facing packaging category focused on replacing single-use plastic
+                in water and beverage applications.
+              </p>
+
+              <ul class="bullet-list">
+                <li>Water-first launch direction</li>
+                <li>Barrier validation required</li>
+                <li>Future beverage expansion</li>
+                <li>Investor-focused flagship concept</li>
+              </ul>
             </div>
-            <div class="popup-details-side">
-              <h4>The Vessel</h4>
-              <p>The Future of Sustainable Bottles. <br>
-              Currently in development, The Vessel represents our vision for next-generation fiber-based packaging. Designed to combine sustainability, functionality, and premium aesthetics while reducing dependence on conventional plastics.
-              Available in industry-standard capacities and dimensions. Custom sizes and configurations can be developed to meet your exact requirements.</p>
+          </div>
+
+          <div class="image-box product">
+            <img src="/images/15th image.png" alt="product" height="380">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Future Expansion</span>
+          <h2>Beyond food-service packaging.</h2>
+        </div>
+
+        <div class="grid-3">
+
+          <div class="card">
+            <h3>Personal Care</h3>
+            <p>Packaging opportunities for cosmetic and personal-care products.</p>
+          </div>
+
+          <div class="card">
+            <h3>Dairy & Beverage</h3>
+            <p>Future liquid containers for milk, juice and cold drinks.</p>
+          </div>
+
+          <div class="card">
+            <h3>Consumer Goods</h3>
+            <p>Expanded applications across dry goods and household packaging.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="highlight">
+          <span class="eyebrow">B2B Inquiry</span>
+          <h2>Ready to evaluate Aquafold packaging?</h2>
+
+          <p>
+            Aquafold is positioned for pilot partnerships, packaging validation, and
+            commercial discussion across food delivery and FMCG sectors.
+          </p>
+
+          <div class="cta-row">
+            <a href="work-with-us.html#partnerships" class="btn btn-primary">Start Pilot Program</a>
+            <a href="work-with-us.html#suppliers" class="btn btn-secondary">Supplier Discussion</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
+            <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
+          </div>
+
+          <p>
+            Purity, Beautifully Engineered.<br>
+            Designed in INDIA.<br>
+            Made for everywhere.
+          </p>
+
+          <div class="footer-social">
+            <div class="social-circle">
+              <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png"
+                  alt="photo" width="20"></a>
+            </div>
+            <div class="social-circle">
+              <a href="aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo"
+                  width="25"></a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank"
+                class="social-btn"> <img src="/images/insta.png" alt="photo" width="29"> </a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img
+                  src="/images/linkedin.png" alt="photo" width="30"></a>
             </div>
           </div>
         </div>
-      </div>
 
-    </div>
-
-    <!-- ── Know More CTA ── -->
-    <div style="display:flex;justify-content:center;margin-top:36px;">
-      <button id="knowMoreBtn" class="know-more-btn" aria-label="Know more about our products">
-        <span class="know-more-icon">
-          <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8h.01M12 12v4"/></svg> -->
-        </span>
-        Know More
-        <span class="know-more-arrow">
-        </span>
-      </button>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════
-     PRODUCT INQUIRY MODAL
-══════════════════════════════════════════ -->
-<div id="productInquiryModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal-card">
-    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-
-    <div class="modal-header">
-      <span class="eyebrow" style="margin-bottom:10px;">Product Enquiry</span>
-      <h3 id="modalTitle" style="margin-bottom:6px;">Get to Know Our Products</h3>
-      <p style="margin:0;font-size:.93rem;">Tell us a little about yourself and we'll get in touch with detailed specs and samples.</p>
-    </div>
-
-    <form id="form-product-inquiry" novalidate>
-
-      <div class="modal-field">
-        <label class="modal-label" for="pi-name">Full Name <span class="req">*</span></label>
-        <input type="text" id="pi-name" placeholder="e.g. Priya Sharma" required autocomplete="name" />
-      </div>
-
-      <div class="modal-field">
-        <label class="modal-label" for="pi-email">Email Address <span class="req">*</span></label>
-        <input type="email" id="pi-email" placeholder="you@company.com" required autocomplete="email" />
-      </div>
-
-      <div class="modal-field">
-        <label class="modal-label" for="pi-phone">Phone Number <span class="req">*</span></label>
-        <input type="tel" id="pi-phone" placeholder="+91 98765 43210" required autocomplete="tel" />
-      </div>
-
-      <div class="modal-field">
-        <label class="modal-label" for="pi-product">Product of Interest <span class="req">*</span></label>
-        <select id="pi-product" required>
-          <option value="" disabled selected>— Select a product —</option>
-          <option value="The Carry">The Carry — Clamshell &amp; Compartment Boxes</option>
-          <option value="The Gather">The Gather — Bowls &amp; Serving Vessels</option>
-          <option value="The Pour">The Pour — Beverage Holders &amp; Cup Carriers</option>
-          <option value="The Serve">The Serve — Plates &amp; Presentation Ware</option>
-          <option value="The Vessel">The Vessel — Sustainable Fiber Bottles</option>
-        </select>
-      </div>
-
-      <div id="pi-status" class="form-status"></div>
-
-      <button class="btn btn-primary" type="submit" style="width:100%;margin-top:4px;min-height:52px;font-size:1rem;">
-        Send Enquiry
-      </button>
-    </form>
-  </div>
-</div>
-
-<section>
-  <div class="container">
-
-    <div class="grid-2">
-
-      <div class="image-box product">
-        <img src="/images/16th image.png" alt="product" height="380">
-      </div>
-
-      <div>
-        <span class="eyebrow">Use Cases</span>
-        <h2>Built for operational packaging environments.</h2>
-
-        <div class="card">
-          <h3>Food Delivery Platforms</h3>
-          <p>
-            Packaging designed for transport windows, stacking, and liquid retention.
-          </p>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="products.html">The Carry — Clamshell Boxes</a>
+          <a href="products.html">The Pour — Beverage Holders</a>
+          <a href="products.html">The Gather — Cutlery</a>
+          <a href="products.html">The Serve — Bowls & Plates</a>
+          <a href="products.html">The Vessel — Bottles</a>
         </div>
 
-        <div class="card" style="margin-top:18px;">
-          <h3>Q-Commerce & Dark Stores</h3>
-          <p>
-            Fast-moving fulfillment operations requiring repeatable packaging quality.
-          </p>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="aboutus.html">About Us</a>
+          <a href="aboutus.html#our-mission">Our Mission</a>
+          <a href="whyaf.html">Why Aquafold</a>
+          <a href="work-with-us.html#partners">Partnership</a>
+          <a href="work-with-us.html#investors">Investors</a>
+          <a href="work-with-us.html">Careers</a>
         </div>
 
-        <div class="card" style="margin-top:18px;">
-          <h3>Hotels & Catering</h3>
-          <p>
-            Bulk-service packaging categories for hospitality and HORECA operations.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-
-    <div class="section-head">
-      <span class="eyebrow">Flagship Development</span>
-      <h2>The molded fiber bottle represents long-term packaging expansion.</h2>
-    </div>
-
-    <div class="grid-2">
-
-      <div>
-        <div class="card">
-          <h3>Molded Fiber Bottle</h3>
-          <p>
-            A future-facing packaging category focused on replacing single-use plastic
-            in water and beverage applications.
-          </p>
-
-          <ul class="bullet-list">
-            <li>Water-first launch direction</li>
-            <li>Barrier validation required</li>
-            <li>Future beverage expansion</li>
-            <li>Investor-focused flagship concept</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="image-box product">
-        <img src="/images/15th image.png" alt="product" height="380">
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-
-    <div class="section-head">
-      <span class="eyebrow">Future Expansion</span>
-      <h2>Beyond food-service packaging.</h2>
-    </div>
-
-    <div class="grid-3">
-
-      <div class="card">
-        <h3>Personal Care</h3>
-        <p>Packaging opportunities for cosmetic and personal-care products.</p>
-      </div>
-
-      <div class="card">
-        <h3>Dairy & Beverage</h3>
-        <p>Future liquid containers for milk, juice and cold drinks.</p>
-      </div>
-
-      <div class="card">
-        <h3>Consumer Goods</h3>
-        <p>Expanded applications across dry goods and household packaging.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="highlight">
-      <span class="eyebrow">B2B Inquiry</span>
-      <h2>Ready to evaluate Aquafold packaging?</h2>
-
-      <p>
-        Aquafold is positioned for pilot partnerships, packaging validation, and
-        commercial discussion across food delivery and FMCG sectors.
-      </p>
-
-      <div class="cta-row">
-        <a href="work-with-us.html#partnerships" class="btn btn-primary">Start Pilot Program</a>
-        <a href="work-with-us.html#suppliers" class="btn btn-secondary">Supplier Discussion</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div class="footer-brand">
-        <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
-          <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="work-with-us.html">Contact Us</a>
+          <a href="work-with-us.html">Privacy Policy</a>
+          <a href="work-with-us.html">Terms of Service</a>
         </div>
 
-        <p>
-          Purity, Beautifully Engineered.<br>
-          Designed in INDIA.<br>
-          Made for everywhere.
-        </p>
-
-        <div class="footer-social">
-          <div class="social-circle">
-            <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png" alt="photo" width="20"></a>
-          </div>
-          <div class="social-circle">
-            <a href="aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo" width="25"></a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank" class="social-btn"> <img src="/images/insta.png" alt="photo" width="29"> </a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img src="/images/linkedin.png" alt="photo" width="30"></a>
-          </div>
-        </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Products</h4>
-        <a href="products.html">The Carry — Clamshell Boxes</a>
-        <a href="products.html">The Pour — Beverage Holders</a>
-        <a href="products.html">The Gather — Cutlery</a>
-        <a href="products.html">The Serve — Bowls & Plates</a>
-        <a href="products.html">The Vessel — Bottles</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="aboutus.html">About Us</a>
-        <a href="aboutus.html#our-mission">Our Mission</a>
-        <a href="whyaf.html">Why Aquafold</a>
-        <a href="work-with-us.html#partners">Partnership</a>
-        <a href="work-with-us.html#investors">Investors</a>
-        <a href="work-with-us.html">Careers</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Support</h4>
-        <a href="faq.html">FAQ</a>
-        <a href="work-with-us.html">Contact Us</a>
-        <a href="work-with-us.html">Privacy Policy</a>
-        <a href="work-with-us.html">Terms of Service</a>
+      <div class="footer-bottom">
+        <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
       </div>
 
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
-    </div>
-
-  </div>
-</footer>
-
-<script>
-  const toggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
     });
-  });
-</script>
-
-<script>
-  /* ── Preloader ── */
-  (function () {
-    const pl = document.getElementById('preloader');
-    function dismiss() {
-      pl.classList.add('hide');
-      document.body.classList.remove('loading');
-    }
-    window.addEventListener('load', function () {
-      const elapsed = performance.now();
-      const remaining = Math.max(0, 2800 - elapsed);
-      setTimeout(dismiss, remaining);
-    });
-    setTimeout(dismiss, 4000);
-  })();
-</script>
-
-<!-- ── Product Inquiry Modal + Supabase ── -->
-<style>
-  /* form-status already defined above */
-</style>
-<script>
-  /* ── Modal Open / Close ── */
-  const modalOverlay = document.getElementById('productInquiryModal');
-  const knowMoreBtn  = document.getElementById('knowMoreBtn');
-  const modalClose   = document.getElementById('modalClose');
-
-  function openModal() {
-    modalOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    document.getElementById('pi-name').focus();
-  }
-  function closeModal() {
-    modalOverlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  knowMoreBtn.addEventListener('click', openModal);
-  modalClose.addEventListener('click', closeModal);
-  modalOverlay.addEventListener('click', (e) => {
-    if (e.target === modalOverlay) closeModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
-  });
-
-  /* ── Supabase Insert ── */
-  const SUPABASE_URL      = 'https://psgsdwfwywldievwusyi.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzZ3Nkd2Z3eXdsZGlldnd1c3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3Nzg0NTUsImV4cCI6MjA5MDM1NDQ1NX0.py8IZHecrbGhPMY9jWiawHaN7fZ9kv9pWfz6GnoSABo';
-
-  async function supabaseInsert(table, payload) {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type':  'application/json',
-        'apikey':        SUPABASE_ANON_KEY,
-        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        'Prefer':        'return=minimal',
-      },
-      body: JSON.stringify(payload),
-    });
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err.message || `HTTP ${res.status}`);
-    }
-  }
-
-  function setStatus(id, msg, type) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.textContent = msg;
-    el.className = `form-status ${type}`;
-  }
-
-  /* ── Product Inquiry Form Submit ── */
-  document.getElementById('form-product-inquiry').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = e.target.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    setStatus('pi-status', 'Sending…', '');
-    try {
-      await supabaseInsert('product_inquiries', {
-        full_name : document.getElementById('pi-name').value.trim(),
-        email     : document.getElementById('pi-email').value.trim(),
-        phone     : document.getElementById('pi-phone').value.trim(),
-        product   : document.getElementById('pi-product').value,
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
       });
-      setStatus('pi-status', '✅ Thank you! We\'ll be in touch shortly.', 'success');
-      e.target.reset();
-      setTimeout(() => {
-        setStatus('pi-status', '', '');
-        closeModal();
-      }, 3000);
-    } catch (err) {
-      setStatus('pi-status', `❌ Something went wrong: ${err.message}`, 'error');
-    } finally {
-      btn.disabled = false;
-    }
-  });
-</script>
+    });
+  </script>
 
-<script>
-  /* ── Responsive Interaction Logic ── */
-  document.querySelectorAll('.gallery-grid .image-box.small').forEach(box => {
-    // Mobile Touch Action: Click to Open & Click Outside/Another Item to close
-    box.addEventListener('click', function(e) {
-      if (window.innerWidth <= 720) {
-        e.stopPropagation();
-        
-        const isActive = this.classList.contains('popup-active');
-        
-        document.querySelectorAll('.gallery-grid .image-box.small').forEach(b => {
-          b.classList.remove('popup-active');
+  <script>
+    /* ── Preloader ── */
+    (function () {
+      const pl = document.getElementById('preloader');
+      function dismiss() {
+        pl.classList.add('hide');
+        document.body.classList.remove('loading');
+      }
+      window.addEventListener('load', function () {
+        const elapsed = performance.now();
+        const remaining = Math.max(0, 2800 - elapsed);
+        setTimeout(dismiss, remaining);
+      });
+      setTimeout(dismiss, 4000);
+    })();
+  </script>
+
+  <!-- ── Product Inquiry Modal + Supabase ── -->
+  <style>
+    /* form-status already defined above */
+  </style>
+  <script>
+    /* ── Modal Open / Close ── */
+    const modalOverlay = document.getElementById('productInquiryModal');
+    const knowMoreBtn = document.getElementById('knowMoreBtn');
+    const modalClose = document.getElementById('modalClose');
+
+    function openModal() {
+      modalOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('pi-name').focus();
+    }
+    function closeModal() {
+      modalOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    knowMoreBtn.addEventListener('click', openModal);
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    /* ── Supabase Insert ── */
+    const SUPABASE_URL = 'https://psgsdwfwywldievwusyi.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzZ3Nkd2Z3eXdsZGlldnd1c3lpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3Nzg0NTUsImV4cCI6MjA5MDM1NDQ1NX0.py8IZHecrbGhPMY9jWiawHaN7fZ9kv9pWfz6GnoSABo';
+
+    async function supabaseInsert(table, payload) {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal',
+        },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.message || `HTTP ${res.status}`);
+      }
+    }
+
+    function setStatus(id, msg, type) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = msg;
+      el.className = `form-status ${type}`;
+    }
+
+    /* ── Product Inquiry Form Submit ── */
+    document.getElementById('form-product-inquiry').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      setStatus('pi-status', 'Sending…', '');
+      try {
+        await supabaseInsert('product_inquiries', {
+          full_name: document.getElementById('pi-name').value.trim(),
+          email: document.getElementById('pi-email').value.trim(),
+          phone: document.getElementById('pi-phone').value.trim(),
+          product: document.getElementById('pi-product').value,
         });
-        
-        if (!isActive) {
-          this.classList.add('popup-active');
-        }
+        setStatus('pi-status', '✅ Thank you! We\'ll be in touch shortly.', 'success');
+        e.target.reset();
+        setTimeout(() => {
+          setStatus('pi-status', '', '');
+          closeModal();
+        }, 3000);
+      } catch (err) {
+        setStatus('pi-status', `❌ Something went wrong: ${err.message}`, 'error');
+      } finally {
+        btn.disabled = false;
       }
     });
-  });
+  </script>
 
-  // Tap anywhere on the viewport backdrop to dismiss the fullscreen layout on mobile
-  document.addEventListener('click', function() {
+  <script>
+    /* ── Responsive Interaction Logic ── */
     document.querySelectorAll('.gallery-grid .image-box.small').forEach(box => {
-      box.classList.remove('popup-active');
+      // Mobile Touch Action: Click to Open & Click Outside/Another Item to close
+      box.addEventListener('click', function (e) {
+        if (window.innerWidth <= 720) {
+          e.stopPropagation();
+
+          const isActive = this.classList.contains('popup-active');
+
+          document.querySelectorAll('.gallery-grid .image-box.small').forEach(b => {
+            b.classList.remove('popup-active');
+          });
+
+          if (!isActive) {
+            this.classList.add('popup-active');
+          }
+        }
+      });
     });
-  });
-</script>
+
+    // Tap anywhere on the viewport backdrop to dismiss the fullscreen layout on mobile
+    document.addEventListener('click', function () {
+      document.querySelectorAll('.gallery-grid .image-box.small').forEach(box => {
+        box.classList.remove('popup-active');
+      });
+    });
+  </script>
 </body>
+
 </html>

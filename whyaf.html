@@ -1,288 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why — Aquafold</title>
   <link rel="icon" type="image/png" href="/images/globe.png" />
-  <meta name="description" content="Discover why Aquafold outperforms plastic and traditional paper. Learn about our plant-based engineering, thermal resilience, and circular design." />
+  <meta name="description"
+    content="Discover why Aquafold outperforms plastic and traditional paper. Learn about our plant-based engineering, thermal resilience, and circular design." />
 
   <style>
     :root {
-      --bg:#f6faf7;
-      --surface:#ffffff;
-      --surface-2:#eef7f0;
-      --text:#132219;
-      --muted:#50685a;
-      --line:#d9e6de;
-      --green:#1f7a3a;
-      --green-dark:#165a2b;
-      --blue:#0b5a88;
-      --radius:22px;
-      --shadow:0 18px 40px rgba(12,40,24,.08);
-      --max:1180px;
+      --bg: #f6faf7;
+      --surface: #ffffff;
+      --surface-2: #eef7f0;
+      --text: #132219;
+      --muted: #50685a;
+      --line: #d9e6de;
+      --green: #1f7a3a;
+      --green-dark: #165a2b;
+      --blue: #0b5a88;
+      --radius: 22px;
+      --shadow: 0 18px 40px rgba(12, 40, 24, .08);
+      --max: 1180px;
     }
 
     * {
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
-      scroll-behavior:smooth;
+      scroll-behavior: smooth;
     }
 
     body {
-      background:var(--bg);
-      color:var(--text);
-      font-family:Inter,ui-sans-serif,system-ui,sans-serif;
-      line-height:1.7;
-      overflow-x:hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
     a {
-      text-decoration:none;
-      color:inherit;
+      text-decoration: none;
+      color: inherit;
     }
 
     .image-box img,
     section img:not(.nav-logo):not(.footer-logo) {
-      max-width:100%;
-      display:block;
-      height:auto;
+      max-width: 100%;
+      display: block;
+      height: auto;
     }
 
     .container {
-      width:min(var(--max), calc(100% - 36px));
-      margin:0 auto;
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
     }
 
     /* ── Navigation ── */
     .nav {
-      position:sticky;
-      top:0;
-      z-index:999;
-      background:#0B1F33;
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid rgba(255,255,255,.08);
-      box-shadow:0 12px 36px rgba(0,0,0,.18);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #0B1F33;
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, .18);
     }
 
     .nav-inner {
-      min-height:76px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .brand {
-      color:#fff;
-      font-weight:800;
-      letter-spacing:.12em;
-      font-size:1rem;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: .12em;
+      font-size: 1rem;
     }
 
     .nav-links {
-      display:flex;
-      align-items:center;
-      gap:22px;
-      flex-wrap:wrap;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
-      color:rgba(255,255,255,.72);
-      font-size:.95rem;
-      transition:.25s ease;
+      color: rgba(255, 255, 255, .72);
+      font-size: .95rem;
+      transition: .25s ease;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color:#fff;
-      transform:translateY(-1px);
+      color: #fff;
+      transform: translateY(-1px);
     }
 
     /* ── Buttons ── */
     .btn {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      padding:0 22px;
-      border-radius:999px;
-      font-weight:700;
-      transition:.3s ease;
-      position:relative;
-      overflow:hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: .3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
     .btn-primary {
       color: white;
       background-color: #014226;
-      border: 1px solid rgba(255,255,255,.14);
+      border: 1px solid rgba(255, 255, 255, .14);
     }
 
     .btn-primary:hover {
-      transform:translateY(-2px);
+      transform: translateY(-2px);
       background-color: #165a2b;
-      box-shadow:0 14px 32px rgba(0,0,0,.18);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, .18);
     }
 
     .btn-secondary {
       color: white;
       background-color: #014226;
-      border:1px solid var(--line);
+      border: 1px solid var(--line);
     }
 
     .btn-secondary:hover {
-      transform:translateY(-2px);
+      transform: translateY(-2px);
       background-color: #165a2b;
     }
 
     /* ── Section Sizing ── */
     section {
-      padding:88px 0;
-      position:relative;
+      padding: 88px 0;
+      position: relative;
     }
 
     .hero {
-      padding:110px 0 80px;
-      overflow:hidden;
+      padding: 110px 0 80px;
+      overflow: hidden;
     }
 
     .hero::before {
-      content:"";
-      position:absolute;
-      right:-120px;
-      top:-80px;
-      width:520px;
-      height:520px;
-      border-radius:50%;
-      background:radial-gradient(circle,rgba(11,90,136,.09),transparent 72%);
-      pointer-events:none;
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -80px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(11, 90, 136, .09), transparent 72%);
+      pointer-events: none;
     }
 
     .hero-grid,
     .feature-grid,
     .grid-3 {
-      display:grid;
-      gap:32px;
-      align-items:center;
+      display: grid;
+      gap: 32px;
+      align-items: center;
     }
 
     .hero-grid {
-      grid-template-columns:1.1fr .9fr;
+      grid-template-columns: 1.1fr .9fr;
     }
 
     .feature-grid {
-      grid-template-columns:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     .grid-3 {
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .eyebrow {
-      display:inline-flex;
-      align-items:center;
-      padding:8px 14px;
-      border-radius:999px;
-      background:var(--surface-2);
-      color:var(--green-dark);
-      font-size:.78rem;
-      letter-spacing:.1em;
-      font-weight:700;
-      text-transform:uppercase;
-      margin-bottom:20px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--green-dark);
+      font-size: .78rem;
+      letter-spacing: .1em;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
-    h1,h2,h3 {
-      line-height:1.1;
-      margin-bottom:18px;
+    h1,
+    h2,
+    h3 {
+      line-height: 1.1;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size:clamp(3rem,5vw,5.4rem);
-      max-width:14ch;
+      font-size: clamp(3rem, 5vw, 5.4rem);
+      max-width: 14ch;
     }
 
     h2 {
-      font-size:clamp(2rem,3vw,2.8rem);
+      font-size: clamp(2rem, 3vw, 2.8rem);
     }
 
     h3 {
-      font-size:1.22rem;
+      font-size: 1.22rem;
     }
 
     p {
-      color:var(--muted);
-      margin-bottom:16px;
+      color: var(--muted);
+      margin-bottom: 16px;
     }
 
     .section-head {
-      max-width:760px;
-      margin-bottom:34px;
+      max-width: 760px;
+      margin-bottom: 34px;
     }
 
     /* ── Containers/Cards ── */
     .card,
     .highlight,
     .image-box {
-      background:var(--surface);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      transition:.35s ease;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: .35s ease;
     }
 
     .card,
     .highlight {
-      padding:28px;
+      padding: 28px;
     }
 
     .card:hover,
     .highlight:hover,
     .image-box:hover {
-      transform:translateY(-8px);
-      box-shadow:0 28px 60px rgba(10,40,24,.12);
+      transform: translateY(-8px);
+      box-shadow: 0 28px 60px rgba(10, 40, 24, .12);
     }
 
     .image-box {
-      min-height:320px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:24px;
-      color:var(--muted);
-      background:linear-gradient(145deg,#f1f8f3,#ffffff 60%,#edf6fb);
-      overflow:hidden;
-      position:relative;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      background: linear-gradient(145deg, #f1f8f3, #ffffff 60%, #edf6fb);
+      overflow: hidden;
+      position: relative;
     }
 
     .image-box::before {
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);
-      transform:translateX(-120%);
-      transition:1.2s ease;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .45), transparent);
+      transform: translateX(-120%);
+      transition: 1.2s ease;
     }
 
     .image-box:hover::before {
-      transform:translateX(120%);
+      transform: translateX(120%);
     }
 
     .image-box.tall {
-      min-height:450px;
+      min-height: 450px;
     }
 
     .cta-row {
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:26px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
     }
 
     /* ── Table Styling ── */
@@ -303,7 +307,8 @@
       font-size: 0.98rem;
     }
 
-    th, td {
+    th,
+    td {
       padding: 18px 24px;
       border-bottom: 1px solid var(--line);
     }
@@ -330,131 +335,142 @@
 
     /* ── Footer ── */
     .footer {
-      margin-top:60px;
-      background:#0B1F33;
-      border-top:1px solid rgba(255,255,255,.08);
-      color:#e7f5ef;
-      overflow:hidden;
-      position:relative;
+      margin-top: 60px;
+      background: #0B1F33;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      color: #e7f5ef;
+      overflow: hidden;
+      position: relative;
     }
 
     .footer-grid {
-      display:grid;
-      grid-template-columns:1.4fr 1fr 1fr 1fr;
-      gap:48px;
-      padding:80px 0 56px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding: 80px 0 56px;
     }
 
     .footer-brand p {
-      color:rgba(231,245,239,.72);
-      max-width:300px;
+      color: rgba(231, 245, 239, .72);
+      max-width: 300px;
     }
 
     .footer-social {
-      display:flex;
-      gap:12px;
-      margin-top:28px;
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
     }
 
     .social-circle {
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      color:#fff;
-      transition:.3s ease;
-      overflow:hidden;
-      flex-shrink:0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      color: #fff;
+      transition: .3s ease;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
     .social-circle img {
-      display:block;
-      width:auto;
-      height:auto;
-      max-width:32px;
-      max-height:32px;
-      object-fit:contain;
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 32px;
+      max-height: 32px;
+      object-fit: contain;
     }
 
     .social-circle:hover {
-      transform:translateY(-4px);
-      background:rgba(255,255,255,.12);
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, .12);
     }
 
     .footer-col h4 {
-      color:#fff;
-      font-size:.95rem;
-      letter-spacing:.08em;
-      margin-bottom:22px;
-      text-transform:uppercase;
+      color: #fff;
+      font-size: .95rem;
+      letter-spacing: .08em;
+      margin-bottom: 22px;
+      text-transform: uppercase;
     }
 
     .footer-col a {
-      display:block;
-      color:rgba(231,245,239,.72);
-      margin-bottom:14px;
-      transition:.25s ease;
+      display: block;
+      color: rgba(231, 245, 239, .72);
+      margin-bottom: 14px;
+      transition: .25s ease;
     }
 
     .footer-col a:hover {
-      color:#fff;
-      transform:translateX(4px);
+      color: #fff;
+      transform: translateX(4px);
     }
 
     .footer-bottom {
-      border-top:1px solid rgba(255,255,255,.08);
-      padding:30px 0 36px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-      color:rgba(231,245,239,.64);
-      font-size:.92rem;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding: 30px 0 36px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: rgba(231, 245, 239, .64);
+      font-size: .92rem;
     }
 
     /* ── Hamburger button ── */
     .nav-toggle {
-      display:none;
-      flex-direction:column;
-      justify-content:center;
-      gap:5px;
-      width:40px;
-      height:40px;
-      background:none;
-      border:none;
-      cursor:pointer;
-      padding:4px;
-      flex-shrink:0;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-shrink: 0;
     }
 
     .nav-toggle span {
-      display:block;
-      height:2px;
-      width:100%;
-      background:#fff;
-      border-radius:2px;
-      transition:transform .3s ease, opacity .3s ease;
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease;
     }
 
-    .nav-toggle.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity:0; }
-    .nav-toggle.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .nav-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
 
     /* ── Tablet (980px) ── */
     @media (max-width:980px) {
+
       .hero-grid,
       .feature-grid,
       .grid-3 {
         grid-template-columns: 1fr 1fr;
         gap: 24px;
       }
+
       .hero-grid {
         grid-template-columns: 1fr;
       }
+
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
@@ -464,7 +480,9 @@
 
     /* ── Mobile (720px) ── */
     @media (max-width:720px) {
-      html, body {
+
+      html,
+      body {
         overflow-x: hidden;
         max-width: 100vw;
       }
@@ -477,6 +495,7 @@
       .nav-toggle {
         display: flex;
       }
+
       .nav-inner {
         flex-wrap: wrap;
         padding: 10px 0;
@@ -484,6 +503,7 @@
         gap: 0;
         min-height: 60px;
       }
+
       .nav-links {
         display: none;
         flex-direction: column;
@@ -492,18 +512,22 @@
         width: 100%;
         padding: 4px 0 14px;
       }
+
       .nav-links.open {
         display: flex;
       }
+
       .nav-links a {
         width: 100%;
         padding: 13px 6px;
-        border-bottom: 1px solid rgba(255,255,255,.07);
+        border-bottom: 1px solid rgba(255, 255, 255, .07);
         font-size: 1rem;
       }
+
       .nav-links a:last-child {
         border-bottom: none;
       }
+
       .nav-links .btn {
         margin-top: 12px;
         width: 100%;
@@ -517,6 +541,7 @@
         width: 90px !important;
         height: auto !important;
       }
+
       .footer-brand .brand img,
       .footer-brand a img {
         width: 140px !important;
@@ -536,6 +561,7 @@
       .hero {
         padding: 48px 0 36px;
       }
+
       .hero::before {
         display: none;
       }
@@ -546,9 +572,11 @@
         min-height: 220px;
         padding: 12px;
       }
+
       .image-box.tall {
         min-height: 240px;
       }
+
       .image-box img {
         max-width: 100% !important;
         width: 100% !important;
@@ -562,10 +590,12 @@
         max-width: 100%;
         line-height: 1.15;
       }
+
       h2 {
         font-size: clamp(1.5rem, 5.5vw, 2rem);
         line-height: 1.15;
       }
+
       h3 {
         font-size: 1.05rem;
       }
@@ -581,6 +611,7 @@
         align-items: stretch;
         gap: 10px;
       }
+
       .cta-row .btn {
         width: 100%;
         text-align: center;
@@ -600,15 +631,19 @@
         -webkit-overflow-scrolling: touch;
         border-radius: 14px;
       }
+
       table {
         min-width: 560px;
         font-size: 0.85rem;
       }
-      th, td {
+
+      th,
+      td {
         padding: 12px 14px;
         white-space: normal;
         word-break: break-word;
       }
+
       th:first-child,
       td:first-child {
         min-width: 120px;
@@ -616,8 +651,9 @@
         left: 0;
         background: var(--surface-2);
         z-index: 1;
-        box-shadow: 2px 0 6px rgba(0,0,0,.06);
+        box-shadow: 2px 0 6px rgba(0, 0, 0, .06);
       }
+
       td:first-child {
         background: var(--surface);
       }
@@ -627,9 +663,11 @@
         gap: 28px;
         padding: 40px 0 20px;
       }
+
       .footer-brand p {
         max-width: 100%;
       }
+
       .footer-bottom {
         flex-direction: column;
         gap: 8px;
@@ -643,43 +681,59 @@
       .container {
         width: calc(100% - 24px);
       }
-      h1 { font-size: 1.9rem; }
-      h2 { font-size: 1.4rem; }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
       .btn {
         font-size: .9rem;
         padding: 0 18px;
         min-height: 48px;
       }
+
       .card,
       .highlight {
         padding: 16px;
       }
+
       table {
         font-size: 0.8rem;
       }
-      th, td {
+
+      th,
+      td {
         padding: 10px 10px;
       }
     }
 
     /* Disable hover lifts on touch devices */
     @media (hover: none) {
+
       .card:hover,
       .highlight:hover,
       .image-box:hover {
         transform: none;
         box-shadow: var(--shadow);
       }
+
       .btn-primary:hover,
       .btn-secondary:hover {
         transform: none;
       }
+
       .social-circle:hover {
         transform: none;
       }
+
       .footer-col a:hover {
         transform: none;
       }
+
       .nav-links a:hover {
         transform: none;
       }
@@ -707,7 +761,7 @@
       pointer-events: none;
     }
 
-    body.loading > *:not(#preloader) {
+    body.loading>*:not(#preloader) {
       visibility: hidden;
     }
 
@@ -727,25 +781,29 @@
       animation-iteration-count: 1;
     }
 
-.earth p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0.25em;
-  font-size: 1.25em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 700; /* Makes the split colors pop nicely */
-}
+    .earth p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0.25em;
+      font-size: 1.25em;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-weight: 700;
+      /* Makes the split colors pop nicely */
+    }
 
-/* Color for the first half */
-.earth p .text-aqua {
-  color: #0b5a88; /* Brand Green */
-}
+    /* Color for the first half */
+    .earth p .text-aqua {
+      color: #0b5a88;
+      /* Brand Green */
+    }
 
-/* Color for the second half */
-.earth p .text-fold {
-  color: #1f7a3a; /* Dark Charcoal/Black */
-}
+    /* Color for the second half */
+    .earth p .text-fold {
+      color: #1f7a3a;
+      /* Dark Charcoal/Black */
+    }
+
     .earth-loader svg:nth-child(1) {
       position: absolute;
       bottom: -2em;
@@ -779,8 +837,16 @@
     }
 
     @keyframes startround {
-      0% { filter: brightness(500%); box-shadow: none; }
-      75% { filter: brightness(500%); box-shadow: none; }
+      0% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
+      75% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
       100% {
         filter: brightness(100%);
         box-shadow:
@@ -790,355 +856,434 @@
     }
 
     @keyframes round1 {
-      0%  { left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      30% { left: -6em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      31% { left: -6em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      35% { left: 7em;  opacity: 0%;   transform: skewX(25deg) rotate(-25deg); }
-      45% { left: 7em;  opacity: 100%; transform: skewX(25deg) rotate(-25deg); }
-      100%{ left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
+      0% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+
+      30% {
+        left: -6em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      31% {
+        left: -6em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      35% {
+        left: 7em;
+        opacity: 0%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      45% {
+        left: 7em;
+        opacity: 100%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      100% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
     }
 
     @keyframes round2 {
-      0%  { left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      75% { left: -7em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      76% { left: -7em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      77% { left: 8em;  opacity: 0%;   transform: skewX(25deg) rotate(-25deg); }
-      80% { left: 8em;  opacity: 100%; transform: skewX(25deg) rotate(-25deg); }
-      100%{ left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
+      0% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+
+      75% {
+        left: -7em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      76% {
+        left: -7em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      77% {
+        left: 8em;
+        opacity: 0%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      80% {
+        left: 8em;
+        opacity: 100%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      100% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
     }
   </style>
 </head>
+
 <body class="loading">
 
-<!-- ══ PRELOADER ══ -->
-<div id="preloader">
-  <div class="earth">
-    <div class="earth-loader">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z" fill="#ffffff"></path>
-      </svg>
+  <!-- ══ PRELOADER ══ -->
+  <div id="preloader">
+    <div class="earth">
+      <div class="earth-loader">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z"
+            fill="#ffffff"></path>
+        </svg>
+      </div>
+      <p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>
     </div>
-<p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>  </div>
-</div>
-
-<!-- ══ HEADER ══ -->
-<header class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;">
-      <img src="/images/aquafoldlogo.png" alt="logo" width="130" style="flex-shrink:0;">
-    </a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="aboutus.html">About us</a>
-      <a href="features.html">Features</a>
-      <a href="products.html">Products</a>
-      <a href="technology.html">Technology</a>
-      <a href="work-with-us.html">Work With Us</a>
-    </nav>
   </div>
-</header>
 
-<main>
-  <!-- ══ HERO SECTION ══ -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Why Molded Fiber Packaging?</span>
-        <h2>The material science, economic case, and environmental logic behind Aquafold's technology choice.</h2>
-        <p>
-          Molded fiber is a material formed by pressing and drying pulp (fibrous material suspended in water) into shaped molds. It's the same technology used for egg cartons, fruit trays, and electronics packaging — now adapted for food-service and liquid packaging applications. <br>
-          Aquafold uses bagasse (sugarcane pulp) as the primary fiber source, combined with plant-based barrier coatings to target moisture resistance, oil resistance, and structural integrity.
-        </p>
-        <div class="cta-row">
-          <a href="#comparison" class="btn btn-primary">See Comparison</a>
-          <a href="products.html" class="btn btn-secondary">Explore Products</a>
+  <!-- ══ HEADER ══ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;">
+        <img src="/images/aquafoldlogo.png" alt="logo" width="130" style="flex-shrink:0;">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="aboutus.html">About us</a>
+        <a href="features.html">Features</a>
+        <a href="products.html">Products</a>
+        <a href="technology.html">Technology</a>
+        <a href="work-with-us.html">Work With Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ══ HERO SECTION ══ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Why Molded Fiber Packaging?</span>
+          <h2>The material science, economic case, and environmental logic behind Aquafold's technology choice.</h2>
+          <p>
+            Molded fiber is a material formed by pressing and drying pulp (fibrous material suspended in water) into
+            shaped molds. It's the same technology used for egg cartons, fruit trays, and electronics packaging — now
+            adapted for food-service and liquid packaging applications. <br>
+            Aquafold uses bagasse (sugarcane pulp) as the primary fiber source, combined with plant-based barrier
+            coatings to target moisture resistance, oil resistance, and structural integrity.
+          </p>
+          <div class="cta-row">
+            <a href="#comparison" class="btn btn-primary">See Comparison</a>
+            <a href="products.html" class="btn btn-secondary">Explore Products</a>
+          </div>
+        </div>
+        <div class="image-box small">
+          <img src="new/6th image (new).png" alt="photo">
         </div>
       </div>
-      <div class="image-box small">
-        <img src="new/6th image (new).png" alt="photo">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══ ADVANTAGES SECTION ══ -->
-  <section id="advantages" style="background: var(--surface-2);">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Why Choose Us</span>
-        <h2>The Structural Difference</h2>
-      </div>
+    <!-- ══ ADVANTAGES SECTION ══ -->
+    <section id="advantages" style="background: var(--surface-2);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why Choose Us</span>
+          <h2>The Structural Difference</h2>
+        </div>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3 style="color: var(--green-dark);">Why Bagasse?</h3>
-          <p> • Material Availability <br>
+        <div class="grid-3">
+          <div class="card">
+            <h3 style="color: var(--green-dark);">Why Bagasse?</h3>
+            <p> • Material Availability <br>
               • Fiber Properties <br>
               • Waste Utilization <br>
               • Local Supply Chains
-          </p>
-        </div>
-        <div class="card">
-          <h3 style="color: var(--green-dark);">The Economic Case</h3>
-          <p> • Cost-Competitive at Scale <br>
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--green-dark);">The Economic Case</h3>
+            <p> • Cost-Competitive at Scale <br>
               • No Recycling Infrastructure Required <br>
               • Regulatory Tailwinds <br>
               • Natural Decompose <br>
-              
-          </p> 
-        </div>
-        <div class="card">
-          <h3 style="color: var(--green-dark);">The Environmental Case</h3>
-          <p> • Plastic Displacement <br>
+
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="color: var(--green-dark);">The Environmental Case</h3>
+            <p> • Plastic Displacement <br>
               • Carbon Reduction <br>
               • Circular Material Flow <br>
               • Environment Effective
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ DATA COMPARISON TABLE ══ -->
+    <section id="comparison">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The Metrics</span>
+          <h2>Molded Fiber vs Alternatives.</h2>
+          <p>The table below compares molded fiber against conventional plastic, bio-plastics, and paper across the
+            metrics that matter most for food-service and liquid packaging applications.</p>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Criteria</th>
+                <th>Molded Fiber (Bagasse)</th>
+                <th>Conventional Plastic</th>
+                <th>Bio-Plastics (PLA/PHA)</th>
+                <th>Paper/Cardboard</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Raw Material Source</strong></td>
+                <td><span class="check-icon">Agricultural waste (bagasse)</span></td>
+                <td><span class="cross-icon">Petroleum-based polymers</span></td>
+                <td><span class="cross-icon">Corn starch / sugarcane / bacterial fermentation</span></td>
+                <td><span class="cross-icon">Wood pulp (virgin or recycled)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Material Cost</strong></td>
+                <td><span class="check-icon">Low (waste stream pricing)</span></td>
+                <td><span class="cross-icon">Moderate (oil-dependent)</span></td>
+                <td><span class="cross-icon">High (specialty feedstock)</span></td>
+                <td><span class="cross-icon">Moderate (pulp pricing)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Moisture Resistance</strong></td>
+                <td><span class="check-icon">High (with barrier coating)</span></td>
+                <td><span class="cross-icon">Very High</span></td>
+                <td><span class="cross-icon">High</span></td>
+                <td><span class="cross-icon">Low (requires coating)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Heat Tolerance</strong></td>
+                <td><span class="check-icon">Moderate (up to 90-100°C)</span></td>
+                <td><span class="cross-icon">High (up to 120°C+)</span></td>
+                <td><span class="cross-icon">Moderate (60-80°C for PLA)</span></td>
+                <td><span class="cross-icon">Low (weakens when wet)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Structural Strength</strong></td>
+                <td><span class="check-icon">Good (fiber-reinforced)</span></td>
+                <td><span class="cross-icon">Excellent</span></td>
+                <td><span class="cross-icon">Good</span></td>
+                <td><span class="cross-icon">Moderate (tears easily)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Compostability</strong></td>
+                <td><span class="check-icon">Fully compostable (90-180 days)</span></td>
+                <td><span class="cross-icon">Not compostable (500+ years)</span></td>
+                <td><span class="cross-icon">Compostable (industrial or home)</span></td>
+                <td><span class="cross-icon">Compostable if uncoated</span></td>
+              </tr>
+              <tr>
+                <td><strong>Carbon Footprint</strong></td>
+                <td><span class="check-icon">Low (~60-70% lower than plastic)</span></td>
+                <td><span class="cross-icon">High (petroleum extraction)</span></td>
+                <td><span class="cross-icon">Moderate (agriculture + processing)</span></td>
+                <td><span class="cross-icon">Moderate (forestry + pulping)</span></td>
+              </tr>
+              <tr>
+                <td><strong>India SUP Ban Compliance</strong></td>
+                <td><span class="check-icon">Compliant</span></td>
+                <td><span class="cross-icon">Banned for many items</span></td>
+                <td><span class="cross-icon">Compliant (if certified)</span></td>
+                <td><span class="cross-icon">Compliant</span></td>
+              </tr>
+              <tr>
+                <td><strong>Manufacturing Scalability</strong></td>
+                <td><span class="check-icon">High (mature pulp molding)</span></td>
+                <td><span class="cross-icon">Very High</span></td>
+                <td><span class="cross-icon">Low (emerging technology)</span></td>
+                <td><span class="cross-icon">High (established industry)</span></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ ENVIRONMENTAL IMPACT SECTION ══ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h2>Barrier Technology:</h2>
+          <h3>How Does It Handle Liquids?</h3>
+          <p>
+            Molded fiber alone is porous — it can't hold liquids without additional treatment. Aquafold applies
+            plant-based barrier coatings to the inner surface of molded fiber products to target: <br>
+            • Moisture resistance (prevents liquid seepage) <br>
+            • Oil and grease resistance (suitable for food contact) <br>
+            • Structural integrity (maintains shape when wet)
           </p>
+
+          <h3>Applications Unlocked by Molded Fiber</h3>
+          <p>
+            Molded fiber is not limited to low-performance applications. With proper barrier engineering, it competes
+            directly with plastic in demanding use cases. <br>
+            • Food-Service Packaging: Plates, bowls, takeout containers, clamshells <br>
+            • Liquid Packaging: Bottles for water, juice, dairy, beverages <br>
+            • Cold-Chain Packaging: Insulated containers (future development) <br>
+            • Protective Packaging: Trays, dividers, cushioning (non-food applications) <br>
+          </p>
+
+          <h3>The Bottom Line</h3>
+          <p>
+            Molded fiber works because: <br>
+            • The material is free — agricultural waste, not petroleum <br>
+            • The technology is mature — pulp molding has been used industrially for decades <br>
+            • The infrastructure exists — composting and agricultural reintegration <br>
+            • The policy is aligned — SUP ban, EPR mandates support the switch <br>
+            • The performance is comparable — with barrier coatings, it meets real-world demands <br>
+          </p>
+
+        </div>
+        <div class="image-box small">
+          <img src="new/Barrier technology image.png" alt="Aquafold robust packaging">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ══ DATA COMPARISON TABLE ══ -->
-  <section id="comparison">
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
     <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">The Metrics</span>
-        <h2>Molded Fiber vs Alternatives.</h2>
-        <p>The table below compares molded fiber against conventional plastic, bio-plastics, and paper across the metrics that matter most for food-service and liquid packaging applications.</p>
-      </div>
-
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Criteria</th>
-              <th>Molded Fiber (Bagasse)</th>
-              <th>Conventional Plastic</th>
-              <th>Bio-Plastics (PLA/PHA)</th>
-              <th>Paper/Cardboard</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Raw Material Source</strong></td>
-              <td><span class="check-icon">Agricultural waste (bagasse)</span></td>
-              <td><span class="cross-icon">Petroleum-based polymers</span></td>
-              <td><span class="cross-icon">Corn starch / sugarcane / bacterial fermentation</span></td>
-              <td><span class="cross-icon">Wood pulp (virgin or recycled)</span></td>
-            </tr>
-            <tr>
-              <td><strong>Material Cost</strong></td>
-              <td><span class="check-icon">Low (waste stream pricing)</span></td>
-              <td><span class="cross-icon">Moderate (oil-dependent)</span></td>
-              <td><span class="cross-icon">High (specialty feedstock)</span></td>
-              <td><span class="cross-icon">Moderate (pulp pricing)</span></td>
-            </tr>
-            <tr>
-              <td><strong>Moisture Resistance</strong></td>
-              <td><span class="check-icon">High (with barrier coating)</span></td>
-              <td><span class="cross-icon">Very High</span></td>
-              <td><span class="cross-icon">High</span></td>
-              <td><span class="cross-icon">Low (requires coating)</span></td>
-            </tr>
-            <tr>
-              <td><strong>Heat Tolerance</strong></td>
-              <td><span class="check-icon">Moderate (up to 90-100°C)</span></td>
-              <td><span class="cross-icon">High (up to 120°C+)</span></td>
-              <td><span class="cross-icon">Moderate (60-80°C for PLA)</span></td>
-              <td><span class="cross-icon">Low (weakens when wet)</span></td>
-            </tr>
-            <tr>
-              <td><strong>Structural Strength</strong></td>
-              <td><span class="check-icon">Good (fiber-reinforced)</span></td>
-              <td><span class="cross-icon">Excellent</span></td>
-              <td><span class="cross-icon">Good</span></td>
-              <td><span class="cross-icon">Moderate (tears easily)</span></td>
-            </tr>
-            <tr>
-              <td><strong>Compostability</strong></td>
-              <td><span class="check-icon">Fully compostable (90-180 days)</span></td>
-              <td><span class="cross-icon">Not compostable (500+ years)</span></td>
-              <td><span class="cross-icon">Compostable (industrial or home)</span></td>
-              <td><span class="cross-icon">Compostable if uncoated</span></td>
-            </tr>
-            <tr>
-              <td><strong>Carbon Footprint</strong></td>
-              <td><span class="check-icon">Low (~60-70% lower than plastic)</span></td>
-              <td><span class="cross-icon">High (petroleum extraction)</span></td>
-              <td><span class="cross-icon">Moderate (agriculture + processing)</span></td>
-              <td><span class="cross-icon">Moderate (forestry + pulping)</span></td>
-            </tr>
-            <tr>
-              <td><strong>India SUP Ban Compliance</strong></td>
-              <td><span class="check-icon">Compliant</span></td>
-              <td><span class="cross-icon">Banned for many items</span></td>
-              <td><span class="cross-icon">Compliant (if certified)</span></td>
-              <td><span class="cross-icon">Compliant</span></td>
-            </tr>
-            <tr>
-              <td><strong>Manufacturing Scalability</strong></td>
-              <td><span class="check-icon">High (mature pulp molding)</span></td>
-              <td><span class="cross-icon">Very High</span></td>
-              <td><span class="cross-icon">Low (emerging technology)</span></td>
-              <td><span class="cross-icon">High (established industry)</span></td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ ENVIRONMENTAL IMPACT SECTION ══ -->
-<section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <h2>Barrier Technology:</h2>
-        <h3>How Does It Handle Liquids?</h3>
-        <p>
-          Molded fiber alone is porous — it can't hold liquids without additional treatment. Aquafold applies plant-based barrier coatings to the inner surface of molded fiber products to target: <br>
-          •	Moisture resistance (prevents liquid seepage) <br>
-          •	Oil and grease resistance (suitable for food contact) <br>
-          •	Structural integrity (maintains shape when wet)
-        </p>
-
-        <h3>Applications Unlocked by Molded Fiber</h3>
-        <p>
-          Molded fiber is not limited to low-performance applications. With proper barrier engineering, it competes directly with plastic in demanding use cases. <br>
-          • Food-Service Packaging: Plates, bowls, takeout containers, clamshells <br>
-          • Liquid Packaging: Bottles for water, juice, dairy, beverages <br>
-          • Cold-Chain Packaging: Insulated containers (future development) <br>
-          • Protective Packaging: Trays, dividers, cushioning (non-food applications) <br>
-        </p>
-
-        <h3>The Bottom Line</h3>
-        <p>
-          Molded fiber works because: <br>
-          • The material is free — agricultural waste, not petroleum <br>
-          • The technology is mature — pulp molding has been used industrially for decades <br>
-          • The infrastructure exists — composting and agricultural reintegration <br>
-          • The policy is aligned — SUP ban, EPR mandates support the switch <br>
-          • The performance is comparable — with barrier coatings, it meets real-world demands <br>
-        </p>
-
-      </div>
-      <div class="image-box small">
-        <img src="new/Barrier technology image.png" alt="Aquafold robust packaging" >
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ══ FOOTER ══ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
-          <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
+            <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
+          </div>
+          <p>
+            Purity, Beautifully Engineered.<br>
+            Designed in INDIA.<br>
+            Made for everywhere.
+          </p>
+          <div class="footer-social">
+            <div class="social-circle">
+              <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png"
+                  alt="photo" width="20"></a>
+            </div>
+            <div class="social-circle">
+              <a href="mailto:aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo"
+                  width="25"></a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank"
+                class="social-btn"> <img src="/images/insta.png" alt="photo" width="29"> </a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img
+                  src="/images/linkedin.png" alt="photo" width="30"></a>
+            </div>
+          </div>
         </div>
-        <p>
-          Purity, Beautifully Engineered.<br>
-          Designed in INDIA.<br>
-          Made for everywhere.
-        </p>
-        <div class="footer-social">
-          <div class="social-circle">
-            <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png" alt="photo" width="20"></a>
-          </div>
-          <div class="social-circle">
-            <a href="mailto:aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo" width="25"></a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank" class="social-btn"> <img src="/images/insta.png" alt="photo" width="29"> </a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img src="/images/linkedin.png" alt="photo" width="30"></a>
-          </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="products.html">The Carry — Clamshell Boxes</a>
+          <a href="products.html">The Pour — Beverage Holders</a>
+          <a href="products.html">The Gather — Cutlery</a>
+          <a href="products.html">The Serve — Bowls & Plates</a>
+          <a href="products.html">The Vessel — Bottles</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="Aboutus.html#about-section">About Us</a>
+          <a href="Aboutus.html#mission-section">Our Mission</a>
+          <a href="whyaf.html">Why Aquafold</a>
+          <a href="work-with-us.html#partners">Partnership</a>
+          <a href="work-with-us.html#investors">Investors</a>
+          <a href="work-with-us.html">Careers</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="work-with-us.html">Contact Us</a>
+          <a href="work-with-us.html">Privacy Policy</a>
+          <a href="work-with-us.html">Terms of Service</a>
         </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Products</h4>
-        <a href="products.html">The Carry — Clamshell Boxes</a>
-        <a href="products.html">The Pour — Beverage Holders</a>
-        <a href="products.html">The Gather — Cutlery</a>
-        <a href="products.html">The Serve — Bowls & Plates</a>
-        <a href="products.html">The Vessel — Bottles</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="Aboutus.html#about-section">About Us</a>
-        <a href="Aboutus.html#mission-section">Our Mission</a>
-        <a href="whyaf.html">Why Aquafold</a>
-        <a href="work-with-us.html#partners">Partnership</a>
-        <a href="work-with-us.html#investors">Investors</a>
-        <a href="work-with-us.html">Careers</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Support</h4>
-        <a href="faq.html">FAQ</a>
-        <a href="work-with-us.html">Contact Us</a>
-        <a href="work-with-us.html">Privacy Policy</a>
-        <a href="work-with-us.html">Terms of Service</a>
+      <div class="footer-bottom">
+        <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
       </div>
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
-    </div>
-  </div>
-</footer>
-
-<!-- ── Navigation Toggle Script ── -->
-<script>
-  const toggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
+  <!-- ── Navigation Toggle Script ── -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
     });
-  });
-</script>
-
-<!-- ── Preloader Animation Dismissal Script ── -->
-<script>
-  (function () {
-    const pl = document.getElementById('preloader');
-    function dismiss() {
-      pl.classList.add('hide');
-      document.body.classList.remove('loading');
-    }
-    window.addEventListener('load', function () {
-      const elapsed = performance.now();
-      const remaining = Math.max(0, 2800 - elapsed);
-      setTimeout(dismiss, remaining);
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
     });
-    setTimeout(dismiss, 4000);
-  })();
-</script>
+  </script>
+
+  <!-- ── Preloader Animation Dismissal Script ── -->
+  <script>
+    (function () {
+      const pl = document.getElementById('preloader');
+      function dismiss() {
+        pl.classList.add('hide');
+        document.body.classList.remove('loading');
+      }
+      window.addEventListener('load', function () {
+        const elapsed = performance.now();
+        const remaining = Math.max(0, 2800 - elapsed);
+        setTimeout(dismiss, remaining);
+      });
+      setTimeout(dismiss, 4000);
+    })();
+  </script>
 </body>
+
 </html>

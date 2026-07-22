@@ -1,463 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aquafold</title>
-  <meta name="description" content="Aquafold sustainable packaging platform combining molded fiber, scalable manufacturing, product roadmap, and partnership opportunities." />
+  <meta name="description"
+    content="Aquafold sustainable packaging platform combining molded fiber, scalable manufacturing, product roadmap, and partnership opportunities." />
   <link rel="icon" type="image/png" href="/images/globe.png" />
 
   <style>
     :root {
-      --bg:#f7fbf8;
-      --surface:#ffffff;
-      --surface-2:#eef7f0;
-      --text:#122018;
-      --muted:#4f6657;
-      --line:#dbe8df;
-      --green:#1f7a3a;
-      --green-dark:#165a2b;
-      --blue:#0b5a88;
-      --radius:18px;
-      --shadow:0 12px 36px rgba(10,40,24,.08);
-      --max:1160px;
+      --bg: #f7fbf8;
+      --surface: #ffffff;
+      --surface-2: #eef7f0;
+      --text: #122018;
+      --muted: #4f6657;
+      --line: #dbe8df;
+      --green: #1f7a3a;
+      --green-dark: #165a2b;
+      --blue: #0b5a88;
+      --radius: 18px;
+      --shadow: 0 12px 36px rgba(10, 40, 24, .08);
+      --max: 1160px;
     }
 
     * {
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
-      -webkit-text-size-adjust:100%;
-      text-size-adjust:100%;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
 
     body {
-      overflow-x:hidden;
-      max-width:100vw;
-      background:var(--bg);
-      color:var(--text);
-      font-family:Inter,ui-sans-serif,system-ui,sans-serif;
-      line-height:1.65;
-      -webkit-tap-highlight-color:transparent;
+      overflow-x: hidden;
+      max-width: 100vw;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.65;
+      -webkit-tap-highlight-color: transparent;
     }
 
     a {
-      text-decoration:none;
-      color:inherit;
+      text-decoration: none;
+      color: inherit;
     }
 
     /* ── Universal responsive media (applies at ALL widths, not just mobile) ── */
-    img, video {
-      max-width:100%;
-      min-width:0;
-      height:auto;
-      display:block;
+    img,
+    video {
+      max-width: 100%;
+      min-width: 0;
+      height: auto;
+      display: block;
     }
 
 
-    a.btn.btn-primary{
+    a.btn.btn-primary {
       color: white;
       background-color: #014226;
     }
 
-    a.btn.btn-secondary{
+    a.btn.btn-secondary {
       color: white;
       background-color: #014226
     }
 
     .container {
-      width:min(var(--max), calc(100% - 32px));
-      margin:0 auto;
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
     }
 
     .nav {
-      position:sticky;
-      top:0;
-      z-index:100;
-      background:#0B1F33;
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid rgba(255,255,255,.08);
-      transition:all .35s ease;
-      box-shadow:0 10px 40px rgba(0,0,0,.18);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0B1F33;
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      transition: all .35s ease;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .18);
     }
 
     .nav-inner {
-      min-height:72px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
     }
 
     .brand {
-      font-weight:800;
-      letter-spacing:.08em;
-      color:#ffffff;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: #ffffff;
     }
 
     .nav-links {
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-      align-items:center;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
     .nav-links a {
-      color:rgba(231,245,239,.72);
-      font-size:.95rem;
-      transition:.25s ease;
+      color: rgba(231, 245, 239, .72);
+      font-size: .95rem;
+      transition: .25s ease;
     }
 
     .nav-links a:hover {
-      color:#ffffff;
-      transform:translateY(-1px);
+      color: #ffffff;
+      transform: translateY(-1px);
     }
 
     .btn {
-      position:relative;
-      overflow:hidden;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:46px;
-      padding:0 20px;
-      border-radius:999px;
-      font-weight:700;
-      border:1px solid transparent;
-      transition:.2s ease;
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: .2s ease;
     }
 
     .btn-primary {
-      background:rgba(255,255,255,.1);
-      color:#fff;
-      border:1px solid rgba(255,255,255,.14);
-      backdrop-filter:blur(10px);
+      background: rgba(255, 255, 255, .1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, .14);
+      backdrop-filter: blur(10px);
     }
 
     .btn-primary:hover {
-      background:var(--green-dark);
-      transform:translateY(-2px);
-      box-shadow:0 12px 30px rgba(31,122,58,.25);
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(31, 122, 58, .25);
     }
 
     .btn-secondary {
-      background:transparent;
-      border-color:rgba(255,255,255,.12);
-      color:#e7f5ef;
+      background: transparent;
+      border-color: rgba(255, 255, 255, .12);
+      color: #e7f5ef;
     }
 
     .btn-secondary:hover {
-      border-color:rgba(255,255,255,.24);
-      color:#fff;
-      background:rgba(255,255,255,.05);
+      border-color: rgba(255, 255, 255, .24);
+      color: #fff;
+      background: rgba(255, 255, 255, .05);
     }
 
     section {
-      padding:72px 0;
+      padding: 72px 0;
     }
 
     .hero {
-      padding:84px 0 56px;
+      padding: 84px 0 56px;
     }
 
     .hero-grid,
     .grid-2,
     .grid-3,
     .gallery-grid {
-      display:grid;
-      gap:28px;
-      align-items:center;
+      display: grid;
+      gap: 28px;
+      align-items: center;
     }
 
     .hero-grid {
-      grid-template-columns:1.1fr .9fr;
+      grid-template-columns: 1.1fr .9fr;
     }
 
     .grid-2 {
-      grid-template-columns:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     .grid-3 {
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .gallery-grid {
-      grid-template-columns:repeat(4,1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
 
     .eyebrow {
-      display:inline-flex;
-      padding:6px 12px;
-      border-radius:999px;
-      background:var(--surface-2);
-      color:var(--green-dark);
-      font-size:.78rem;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      margin-bottom:18px;
+      display: inline-flex;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--green-dark);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
     }
 
-    h1,h2,h3 {
-      line-height:1.15;
-      margin-bottom:16px;
+    h1,
+    h2,
+    h3 {
+      line-height: 1.15;
+      margin-bottom: 16px;
     }
 
     h1 {
-      font-size:clamp(2.8rem,5vw,5rem);
-      max-width:10ch;
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      max-width: 10ch;
     }
 
     h2 {
-      font-size:clamp(1.9rem,3vw,2.7rem);
+      font-size: clamp(1.9rem, 3vw, 2.7rem);
     }
 
     h3 {
-      font-size:1.18rem;
+      font-size: 1.18rem;
     }
 
     p {
-      color:var(--muted);
-      margin-bottom:14px;
+      color: var(--muted);
+      margin-bottom: 14px;
     }
 
     .card,
     .image-box,
     .highlight {
-      transition:all .35s ease;
-      background:var(--surface);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+      transition: all .35s ease;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
     .card,
     .highlight {
-      padding:24px;
+      padding: 24px;
     }
 
     .image-box {
-      min-height:300px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:20px;
-      background:linear-gradient(160deg,#eff7f1,#fff 60%,#eef5fb);
-      color:var(--muted);
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(160deg, #eff7f1, #fff 60%, #eef5fb);
+      color: var(--muted);
     }
 
     .image-box.tall {
-      min-height:420px;
+      min-height: 420px;
     }
 
     .image-box.small {
-      min-height:220px;
+      min-height: 220px;
     }
 
     .section-head {
-      max-width:760px;
-      margin-bottom:28px;
+      max-width: 760px;
+      margin-bottom: 28px;
     }
 
     .cta-row {
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:22px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
     }
 
     .highlight {
-      border-left:4px solid var(--blue);
+      border-left: 4px solid var(--blue);
     }
 
     .footer {
-      margin-top:48px;
-      border-top:1px solid rgba(255,255,255,.08);
+      margin-top: 48px;
+      border-top: 1px solid rgba(255, 255, 255, .08);
       background: #0B1F33;
-      color:#e7f5ef;
-      position:relative;
-      overflow:hidden;
+      color: #e7f5ef;
+      position: relative;
+      overflow: hidden;
     }
 
     .footer-inner {
-      position:relative;
-      z-index:2;
-      padding:28px 0 42px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
+      position: relative;
+      z-index: 2;
+      padding: 28px 0 42px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .footer small {
-      color:rgba(231,245,239,.68);
+      color: rgba(231, 245, 239, .68);
     }
 
     .footer-grid {
-      display:grid;
-      grid-template-columns:1.4fr 1fr 1fr 1fr;
-      gap:48px;
-      padding:72px 0 52px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding: 72px 0 52px;
     }
 
     .footer-col h4 {
-      font-size:.95rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      margin-bottom:20px;
-      color:#ffffff;
+      font-size: .95rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: #ffffff;
     }
 
     .footer-col a {
-      display:block;
-      color:rgba(231,245,239,.72);
-      margin-bottom:14px;
-      transition:.25s ease;
+      display: block;
+      color: rgba(231, 245, 239, .72);
+      margin-bottom: 14px;
+      transition: .25s ease;
     }
 
     .footer-col a:hover {
-      color:#fff;
-      transform:translateX(4px);
+      color: #fff;
+      transform: translateX(4px);
     }
 
     .footer-brand p {
-      color:rgba(231,245,239,.72);
-      max-width:280px;
+      color: rgba(231, 245, 239, .72);
+      max-width: 280px;
     }
 
     .footer-social {
-      display:flex;
-      gap:12px;
-      margin-top:26px;
+      display: flex;
+      gap: 12px;
+      margin-top: 26px;
     }
 
     .social-circle {
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      border:1px solid rgba(255,255,255,.15);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      transition:.3s ease;
-      background:rgba(255,255,255,.05);
-      overflow:hidden;
-      flex-shrink:0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transition: .3s ease;
+      background: rgba(255, 255, 255, .05);
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
     .social-circle img {
-      display:block;
-      width:auto;
-      height:auto;
-      max-width:32px;
-      max-height:32px;
-      object-fit:contain;
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 32px;
+      max-height: 32px;
+      object-fit: contain;
     }
 
     .social-circle:hover {
-      transform:translateY(-4px);
-      background:rgba(255,255,255,.12);
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, .12);
     }
 
     .footer-bottom {
-      border-top:1px solid rgba(255,255,255,.08);
-      padding:28px 0 36px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-      color:rgba(231,245,239,.65);
-      font-size:.92rem;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding: 28px 0 36px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: rgba(231, 245, 239, .65);
+      font-size: .92rem;
     }
 
     .card:hover,
     .image-box:hover,
     .highlight:hover {
-      transform:translateY(-8px);
-      box-shadow:0 24px 50px rgba(10,40,24,.12);
+      transform: translateY(-8px);
+      box-shadow: 0 24px 50px rgba(10, 40, 24, .12);
     }
 
     .image-box {
-      position:relative;
-      overflow:hidden;
+      position: relative;
+      overflow: hidden;
     }
 
     .image-box::before {
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);
-      transform:translateX(-120%);
-      transition:1.2s ease;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .4), transparent);
+      transform: translateX(-120%);
+      transition: 1.2s ease;
     }
 
     .image-box:hover::before {
-      transform:translateX(120%);
+      transform: translateX(120%);
     }
 
     .hero {
-      position:relative;
-      overflow:hidden;
+      position: relative;
+      overflow: hidden;
     }
 
     .hero::before {
-      content:"";
-      position:absolute;
-      top:-100px;
-      right:-120px;
-      width:420px;
-      height:420px;
-      background:radial-gradient(circle,rgba(31,122,58,.08),transparent 70%);
-      border-radius:50%;
-      pointer-events:none;
+      content: "";
+      position: absolute;
+      top: -100px;
+      right: -120px;
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, rgba(31, 122, 58, .08), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
     }
 
     /* ── Hamburger button (hidden on desktop) ── */
     .nav-toggle {
-      display:none;
-      flex-direction:column;
-      justify-content:center;
-      gap:5px;
-      width:40px;
-      height:40px;
-      background:none;
-      border:none;
-      cursor:pointer;
-      padding:4px;
-      flex-shrink:0;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-shrink: 0;
     }
 
     .nav-toggle span {
-      display:block;
-      height:2px;
-      width:100%;
-      background:#fff;
-      border-radius:2px;
-      transition:transform .3s ease, opacity .3s ease;
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease;
     }
 
-    .nav-toggle.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity:0; }
-    .nav-toggle.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .nav-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
 
     /* ── Tablet ── */
     @media (max-width:960px) {
+
       .hero-grid,
       .grid-2,
       .grid-3,
       .gallery-grid {
-        grid-template-columns:1fr 1fr;
+        grid-template-columns: 1fr 1fr;
       }
 
       .footer-grid {
-        grid-template-columns:1fr 1fr;
-        gap:32px;
-        padding:48px 0 36px;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding: 48px 0 36px;
       }
     }
 
@@ -466,41 +480,41 @@
 
       /* Nav */
       .nav-toggle {
-        display:flex;
+        display: flex;
       }
 
       .nav-inner {
-        flex-wrap:wrap;
-        padding:12px 0;
-        align-items:center;
-        gap:0;
+        flex-wrap: wrap;
+        padding: 12px 0;
+        align-items: center;
+        gap: 0;
       }
 
       .nav-links {
-        display:none;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:0;
-        width:100%;
-        padding:8px 0 16px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        padding: 8px 0 16px;
       }
 
       .nav-links.open {
-        display:flex;
+        display: flex;
       }
 
       .nav-links a {
-        width:100%;
-        padding:12px 4px;
-        border-bottom:1px solid rgba(255,255,255,.07);
-        font-size:1rem;
+        width: 100%;
+        padding: 12px 4px;
+        border-bottom: 1px solid rgba(255, 255, 255, .07);
+        font-size: 1rem;
       }
 
       .nav-links .btn {
-        margin-top:12px;
-        width:100%;
-        text-align:center;
-        border-radius:999px;
+        margin-top: 12px;
+        width: 100%;
+        text-align: center;
+        border-radius: 999px;
       }
 
       /* Grids → single column */
@@ -508,90 +522,92 @@
       .grid-2,
       .grid-3,
       .gallery-grid {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
       }
 
       /* Hero */
       .hero {
-        padding:48px 0 36px;
+        padding: 48px 0 36px;
       }
 
       h1 {
-        font-size:clamp(2rem,8vw,2.8rem);
-        max-width:100%;
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        max-width: 100%;
       }
 
       h2 {
-        font-size:clamp(1.4rem,5vw,1.9rem);
+        font-size: clamp(1.4rem, 5vw, 1.9rem);
       }
 
       /* Images & videos: always fill width, never overflow */
       .image-box {
-        min-height:200px;
+        min-height: 200px;
       }
 
       .image-box.tall {
-        min-height:260px;
+        min-height: 260px;
       }
 
       .image-box img,
       .image-box video {
-        max-width:100%;
-        width:100% !important;
-        height:auto !important;
+        max-width: 100%;
+        width: 100% !important;
+        height: auto !important;
       }
 
       /* Sections */
       section {
-        padding:48px 0;
+        padding: 48px 0;
       }
 
       /* CTA row */
       .cta-row {
-        flex-direction:column;
-        align-items:stretch;
+        flex-direction: column;
+        align-items: stretch;
       }
 
       .cta-row .btn {
-        width:100%;
-        text-align:center;
+        width: 100%;
+        text-align: center;
       }
 
       /* Footer */
       .footer-grid {
-        grid-template-columns:1fr;
-        gap:28px;
-        padding:40px 0 28px;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 0 28px;
       }
 
       .footer-bottom {
-        flex-direction:column;
-        gap:8px;
-        text-align:center;
-        padding:20px 0 28px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 20px 0 28px;
       }
 
       .footer-brand p {
-        max-width:100%;
+        max-width: 100%;
       }
     }
 
     /* ── Small mobile ── */
     @media (max-width:400px) {
       h1 {
-        font-size:1.9rem;
+        font-size: 1.9rem;
       }
 
       .btn {
-        font-size:.88rem;
-        padding:0 16px;
-        min-height:44px;
+        font-size: .88rem;
+        padding: 0 16px;
+        min-height: 44px;
       }
     }
 
     /* ── Global mobile overflow fix ── */
     @media (max-width:720px) {
-      html, body {
+
+      html,
+      body {
         overflow-x: hidden;
         max-width: 100vw;
       }
@@ -602,7 +618,8 @@
       }
 
       /* Force all images & videos inside any element to be responsive */
-      img, video {
+      img,
+      video {
         max-width: 100% !important;
         width: auto !important;
         height: auto !important;
@@ -666,7 +683,7 @@
       pointer-events: none;
     }
 
-    body.loading > *:not(#preloader) {
+    body.loading>*:not(#preloader) {
       visibility: hidden;
     }
 
@@ -688,25 +705,28 @@
       animation-iteration-count: 1;
     }
 
- .earth p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0.25em;
-  font-size: 1.25em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 700; /* Makes the split colors pop nicely */
-}
+    .earth p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0.25em;
+      font-size: 1.25em;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-weight: 700;
+      /* Makes the split colors pop nicely */
+    }
 
-/* Color for the first half */
-.earth p .text-aqua {
-  color: #0b5a88; /* Brand Green */
-}
+    /* Color for the first half */
+    .earth p .text-aqua {
+      color: #0b5a88;
+      /* Brand Green */
+    }
 
-/* Color for the second half */
-.earth p .text-fold {
-  color: #1f7a3a; /* Dark Charcoal/Black */
-}
+    /* Color for the second half */
+    .earth p .text-fold {
+      color: #1f7a3a;
+      /* Dark Charcoal/Black */
+    }
 
     .earth-loader svg:nth-child(1) {
       position: absolute;
@@ -741,8 +761,16 @@
     }
 
     @keyframes startround {
-      0% { filter: brightness(500%); box-shadow: none; }
-      75% { filter: brightness(500%); box-shadow: none; }
+      0% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
+      75% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
       100% {
         filter: brightness(100%);
         box-shadow:
@@ -752,268 +780,340 @@
     }
 
     @keyframes round1 {
-      0%  { left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      30% { left: -6em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      31% { left: -6em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      35% { left: 7em;  opacity: 0%;   transform: skewX(25deg) rotate(-25deg); }
-      45% { left: 7em;  opacity: 100%; transform: skewX(25deg) rotate(-25deg); }
-      100%{ left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
+      0% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+
+      30% {
+        left: -6em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      31% {
+        left: -6em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      35% {
+        left: 7em;
+        opacity: 0%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      45% {
+        left: 7em;
+        opacity: 100%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      100% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
     }
 
     @keyframes round2 {
-      0%  { left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      75% { left: -7em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      76% { left: -7em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      77% { left: 8em;  opacity: 0%;   transform: skewX(25deg) rotate(-25deg); }
-      80% { left: 8em;  opacity: 100%; transform: skewX(25deg) rotate(-25deg); }
-      100%{ left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
+      0% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+
+      75% {
+        left: -7em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      76% {
+        left: -7em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      77% {
+        left: 8em;
+        opacity: 0%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      80% {
+        left: 8em;
+        opacity: 100%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      100% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
     }
-      /* ── Mobile logo size fixes ── */
+
+    /* ── Mobile logo size fixes ── */
     @media (max-width:720px) {
-      .brand img, .nav-inner .brand img {
+
+      .brand img,
+      .nav-inner .brand img {
         width: 90px !important;
         height: auto !important;
       }
-      .footer-brand .brand img, .footer-brand a img {
+
+      .footer-brand .brand img,
+      .footer-brand a img {
         width: 140px !important;
         height: auto !important;
       }
     }
   </style>
 </head>
+
 <body class="loading">
 
-<!-- ══ PRELOADER ══ -->
-<div id="preloader">
-  <div class="earth">
-    <div class="earth-loader">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z" fill="#ffffff"></path>
-      </svg>
+  <!-- ══ PRELOADER ══ -->
+  <div id="preloader">
+    <div class="earth">
+      <div class="earth-loader">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z"
+            fill="#ffffff"></path>
+        </svg>
+      </div>
+      <p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>
     </div>
-    <p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>
   </div>
-</div>
 
-<header class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;">
-      <!-- <img src="/images/globe.png" alt="globe" height="34" style="flex-shrink:0;"> -->
-      <img src="/images/aquafoldlogo.png" alt="Aquafold" width="130" style="flex-shrink:0;">
-    </a>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;">
+        <!-- <img src="/images/globe.png" alt="globe" height="34" style="flex-shrink:0;"> -->
+        <img src="/images/aquafoldlogo.png" alt="Aquafold" width="130" style="flex-shrink:0;">
+      </a>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="aboutus.html">About us</a>
-      <a href="features.html">Features</a>
-      <a href="products.html">Products</a>
-      <a href="technology.html">Technology</a>
-      <a href="work-with-us.html">Work With Us</a>
-      <!-- <a href="work-with-us.html#investors" class="btn btn-primary">Investor Inquiry</a> -->
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="container hero-grid">
-
-      <div>
-        <!-- <span class="eyebrow">Aquafold</span> -->
-        <h2>Molded fiber packaging designed for scalable food-service and future liquid packaging applications.</h2>
-
-        <p>
-          Aquafold develops molded fiber packaging designed for food delivery,
-          hospitality, Q-commerce, and future liquid packaging categories.
-          The platform combines plant-based structure, barrier development,
-          and manufacturing realism.
-        </p>
-
-        <div class="cta-row">
-          <a href="products.html" class="btn btn-primary">Explore Products</a>
-          <a href="technology.html" class="btn btn-secondary">See Technology</a>
-        </div>
-      </div>
-
-      <div class="image-box small">
-        <img src="images/6th image.png" alt="product" height="600">
-      </div>
-
+      <nav class="nav-links" id="navLinks">
+        <a href="aboutus.html">About us</a>
+        <a href="features.html">Features</a>
+        <a href="products.html">Products</a>
+        <a href="technology.html">Technology</a>
+        <a href="work-with-us.html">Work With Us</a>
+        <!-- <a href="work-with-us.html#investors" class="btn btn-primary">Investor Inquiry</a> -->
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section>
-    <div class="container">
+  <main>
 
-      <div class="section-head">
-        <span class="eyebrow">Core Features</span>
-        <h2>Material, barrier performance, and manufacturing alignment.</h2>
-      </div>
-
-      <div class="grid-3">
-
-        <div class="card">
-          <h3>Plant-Based Structure</h3>
-          <p>Packaging built using agricultural fiber such as bagasse.</p>
-        </div>
-
-        <div class="card">
-          <h3>Leak Resistance Direction</h3>
-          <p>Designed to support oils, sauces, and moisture-heavy applications.</p>
-        </div>
-
-        <div class="card">
-          <h3>Scalable Manufacturing</h3>
-          <p>Aligned with pulp molding infrastructure and commercial production workflows.</p>
-        </div>
-
-      </div>
-
-      <div class="gallery-grid" style="margin-top:28px;">
-        <div class="image-box small">
-          <img src="/images/2.jpeg" alt="product" width="300">
-        </div>
-        <div class="image-box small">
-          <img src="/images/3.jpeg" alt="product" width="300">
-        </div>
-        <div class="image-box small">
-          <img src="/images/4.jpeg" alt="product" width="300">
-        </div>
-        <div class="image-box small">
-          <img src="images/1.1.png" alt="product" width="300">
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-
-      <div class="section-head">
-        <span class="eyebrow">Product Roadmap</span>
-        <h2>Near-term execution paired with long-term expansion.</h2>
-      </div>
-
-      <div class="grid-3">
-
-        <div class="card">
-          <h3>Tableware</h3>
-          <p>Plates, trays, bowls, and food-service packaging categories.</p>
-        </div>
-
-        <div class="card">
-          <h3>Cutlery</h3>
-          <p>Disposable molded fiber cutlery aligned with scale and sustainability.</p>
-        </div>
-
-        <div class="card">
-          <h3>Molded Fiber Bottle</h3>
-          <p>Long-term flagship packaging category under development.</p>
-        </div>
-
-      </div>
-
-      <div class="grid-2" style="margin-top:28px;">
-        <div class="image-box small">
-            <video src="/images/1.mp4" width="565" autoplay loop muted playsinline></video> 
-        </div>
-
-        <div class="image-box small">
-          <video src="/images/2.mp4" width="565" autoplay loop muted playsinline></video>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-
-      <div class="section-head">
-        <span class="eyebrow">Technology</span>
-        <h2>Two-layer packaging engineering system.</h2>
-      </div>
-
-      <div class="grid-2">
+    <section class="hero">
+      <div class="container hero-grid">
 
         <div>
+          <!-- <span class="eyebrow">Aquafold</span> -->
+          <h2>Molded fiber packaging designed for scalable food-service and future liquid packaging applications.</h2>
+
+          <p>
+            Aquafold develops molded fiber packaging designed for food delivery,
+            hospitality, Q-commerce, and future liquid packaging categories.
+            The platform combines plant-based structure, barrier development,
+            and manufacturing realism.
+          </p>
+
+          <div class="cta-row">
+            <a href="products.html" class="btn btn-primary">Explore Products</a>
+            <a href="technology.html" class="btn btn-secondary">See Technology</a>
+          </div>
+        </div>
+
+        <div class="image-box small">
+          <img src="images/6th image.png" alt="product" height="600">
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Core Features</span>
+          <h2>Material, barrier performance, and manufacturing alignment.</h2>
+        </div>
+
+        <div class="grid-3">
+
           <div class="card">
-            <h3>Outer Structural Layer</h3>
-            <p>Molded fiber creates rigidity, shape, and mechanical support.</p>
+            <h3>Plant-Based Structure</h3>
+            <p>Packaging built using agricultural fiber such as bagasse.</p>
           </div>
 
-          <div class="card" style="margin-top:18px;">
-            <h3>Inner Barrier Direction</h3>
-            <p>Bio-based coating direction improves moisture resistance.</p>
+          <div class="card">
+            <h3>Leak Resistance Direction</h3>
+            <p>Designed to support oils, sauces, and moisture-heavy applications.</p>
+          </div>
+
+          <div class="card">
+            <h3>Scalable Manufacturing</h3>
+            <p>Aligned with pulp molding infrastructure and commercial production workflows.</p>
+          </div>
+
+        </div>
+
+        <div class="gallery-grid" style="margin-top:28px;">
+          <div class="image-box small">
+            <img src="/images/2.jpeg" alt="product" width="300">
+          </div>
+          <div class="image-box small">
+            <img src="/images/3.jpeg" alt="product" width="300">
+          </div>
+          <div class="image-box small">
+            <img src="/images/4.jpeg" alt="product" width="300">
+          </div>
+          <div class="image-box small">
+            <img src="images/1.1.png" alt="product" width="300">
           </div>
         </div>
 
-        <div class="image-box small">
-          <video src="/images/3.mp4" width="565" autoplay loop muted playsinline></video>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Product Roadmap</span>
+          <h2>Near-term execution paired with long-term expansion.</h2>
+        </div>
+
+        <div class="grid-3">
+
+          <div class="card">
+            <h3>Tableware</h3>
+            <p>Plates, trays, bowls, and food-service packaging categories.</p>
+          </div>
+
+          <div class="card">
+            <h3>Cutlery</h3>
+            <p>Disposable molded fiber cutlery aligned with scale and sustainability.</p>
+          </div>
+
+          <div class="card">
+            <h3>Molded Fiber Bottle</h3>
+            <p>Long-term flagship packaging category under development.</p>
+          </div>
+
+        </div>
+
+        <div class="grid-2" style="margin-top:28px;">
+          <div class="image-box small">
+            <video src="/images/1.mp4" width="565" autoplay loop muted playsinline></video>
+          </div>
+
+          <div class="image-box small">
+            <video src="/images/2.mp4" width="565" autoplay loop muted playsinline></video>
+          </div>
         </div>
 
       </div>
+    </section>
 
-      <div class="gallery-grid" style="margin-top:28px;">
-        <div class="image-box small">
-          <img src="/images/m1.jpeg" alt="product" width="300">
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Technology</span>
+          <h2>Two-layer packaging engineering system.</h2>
         </div>
-        <div class="image-box small">
-          <img src="/images/m2.2.jpeg" alt="product" width="220">
+
+        <div class="grid-2">
+
+          <div>
+            <div class="card">
+              <h3>Outer Structural Layer</h3>
+              <p>Molded fiber creates rigidity, shape, and mechanical support.</p>
+            </div>
+
+            <div class="card" style="margin-top:18px;">
+              <h3>Inner Barrier Direction</h3>
+              <p>Bio-based coating direction improves moisture resistance.</p>
+            </div>
+          </div>
+
+          <div class="image-box small">
+            <video src="/images/3.mp4" width="565" autoplay loop muted playsinline></video>
+          </div>
+
         </div>
-        <div class="image-box small">
-          <img src="/images/m3.jpeg" alt="product" width="300">
+
+        <div class="gallery-grid" style="margin-top:28px;">
+          <div class="image-box small">
+            <img src="/images/m1.jpeg" alt="product" width="300">
+          </div>
+          <div class="image-box small">
+            <img src="/images/m2.2.jpeg" alt="product" width="220">
+          </div>
+          <div class="image-box small">
+            <img src="/images/m3.jpeg" alt="product" width="300">
+          </div>
+          <div class="image-box small">
+            <img src="/images/m4.jpeg" alt="product" width="300">
+          </div>
         </div>
-        <div class="image-box small">
-          <img src="/images/m4.jpeg" alt="product" width="300">
-        </div>
+
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section>
+      <div class="container">
 
-  <section>
-    <div class="container">
-
-      <div class="section-head">
-        <span class="eyebrow">Work With Us</span>
-        <h2>Multiple pathways to collaborate with Aquafold.</h2>
-      </div>
-
-      <div class="grid-3">
-
-        <div class="card">
-          <h3>Investors</h3>
-          <p>Funding conversations focused on scalable sustainable packaging.</p>
+        <div class="section-head">
+          <span class="eyebrow">Work With Us</span>
+          <h2>Multiple pathways to collaborate with Aquafold.</h2>
         </div>
 
-        <div class="card">
-          <h3>B2B Partnerships</h3>
-          <p>Pilot programs and product validation for packaging deployment.</p>
+        <div class="grid-3">
+
+          <div class="card">
+            <h3>Investors</h3>
+            <p>Funding conversations focused on scalable sustainable packaging.</p>
+          </div>
+
+          <div class="card">
+            <h3>B2B Partnerships</h3>
+            <p>Pilot programs and product validation for packaging deployment.</p>
+          </div>
+
+          <div class="card">
+            <h3>Suppliers & Talent</h3>
+            <p>Manufacturing, tooling, coatings, engineering, and collaboration.</p>
+          </div>
+
         </div>
 
-        <div class="card">
-          <h3>Suppliers & Talent</h3>
-          <p>Manufacturing, tooling, coatings, engineering, and collaboration.</p>
-        </div>
-
-      </div>
-
-      <!-- <div class="grid-2" style="margin-top:28px;">
+        <!-- <div class="grid-2" style="margin-top:28px;">
         <div class="image-box">
           
         </div>
@@ -1025,138 +1125,145 @@
         </div>
       </div> -->
 
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section>
+    <section>
+      <div class="container">
+
+        <div class="highlight">
+          <span class="eyebrow">WHY AQUAFOLD</span>
+          <h2>Why Molded Fiber Packaging?</h2>
+
+          <p>
+            The question isn't "how do we make plastic slightly better?" It's "what material can we scale that doesn't
+            depend on petroleum, doesn't require new recycling infrastructure, and uses waste streams that already
+            exist?"
+          </p>
+
+          <div class="cta-row">
+            <a href="whyaf.html" class="btn btn-primary">Know More</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
     <div class="container">
 
-      <div class="highlight">
-        <span class="eyebrow">WHY AQUAFOLD</span>
-        <h2>Why Molded Fiber Packaging?</h2>
+      <div class="footer-grid">
 
-        <p>
-          The question isn't "how do we make plastic slightly better?" It's "what material can we scale that doesn't depend on petroleum, doesn't require new recycling infrastructure, and uses waste streams that already exist?"
-        </p>
+        <div class="footer-brand">
+          <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
+            <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
+          </div>
 
-        <div class="cta-row">
-          <a href="whyaf.html" class="btn btn-primary">Know More</a>
+          <p>
+            Purity, Beautifully Engineered.<br>
+            Designed in INDIA.<br>
+            Made for everywhere.
+          </p>
+
+          <div class="footer-social">
+            <div class="social-circle">
+              <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png"
+                  alt="photo" width="20"></a>
+            </div>
+            <div class="social-circle">
+              <a href="mailto:aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo"
+                  width="25"></a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank"
+                class="social-btn"> <img src="/images/insta.png" alt="photo" width="29"> </a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img
+                  src="/images/linkedin.png" alt="photo" width="30"></a>
+            </div>
+          </div>
         </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="products.html">The Carry — Clamshell Boxes</a>
+          <a href="products.html">The Pour — Beverage Holders</a>
+          <a href="products.html">The Gather — Cutlery</a>
+          <a href="products.html">The Serve — Bowls & Plates</a>
+          <a href="products.html">The Vessel — Bottles</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="aboutus.html">About Us</a>
+          <a href="aboutus.html#our-mission">Our Mission</a>
+          <a href="whyaf.html">Why Aquafold</a>
+          <a href="work-with-us.html#partners">Partnership</a>
+          <a href="work-with-us.html#investors">Investors</a>
+          <a href="work-with-us.html">Careers</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="work-with-us.html">Contact Us</a>
+          <a href="work-with-us.html">Privacy Policy</a>
+          <a href="work-with-us.html">Terms of Service</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
+        <!-- <div>Privacy Policy · Terms of Service</div> -->
       </div>
 
     </div>
-  </section>
+  </footer>
 
-</main>
-
-<footer class="footer">
-  <div class="container">
-
-    <div class="footer-grid">
-
-      <div class="footer-brand">
-        <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
-          <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
-        </div>
-
-        <p>
-          Purity, Beautifully Engineered.<br>
-          Designed in INDIA.<br>
-          Made for everywhere.
-        </p>
-
-        <div class="footer-social">
-          <div class="social-circle">
-            <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png" alt="photo" width="20"></a>
-          </div>
-          <div class="social-circle">
-            <a href="mailto:aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo" width="25"></a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank" class="social-btn"> <img src="/images/insta.png" alt="photo" width="29"> </a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img src="/images/linkedin.png" alt="photo" width="30"></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Products</h4>
-        <a href="products.html">The Carry — Clamshell Boxes</a>
-        <a href="products.html">The Pour — Beverage Holders</a>
-        <a href="products.html">The Gather — Cutlery</a>
-        <a href="products.html">The Serve — Bowls & Plates</a>
-        <a href="products.html">The Vessel — Bottles</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="aboutus.html">About Us</a>
-        <a href="aboutus.html#our-mission">Our Mission</a>
-        <a href="whyaf.html">Why Aquafold</a>
-        <a href="work-with-us.html#partners">Partnership</a>
-        <a href="work-with-us.html#investors">Investors</a>
-        <a href="work-with-us.html">Careers</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Support</h4>
-        <a href="faq.html">FAQ</a>
-        <a href="work-with-us.html">Contact Us</a>
-        <a href="work-with-us.html">Privacy Policy</a>
-        <a href="work-with-us.html">Terms of Service</a>
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-      <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
-      <!-- <div>Privacy Policy · Terms of Service</div> -->
-    </div>
-
-  </div>
-</footer>
-
-<script>
-  const toggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-  // Close menu when a link is tapped
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
     });
-  });
-</script>
-
-<script>
-  /* ── Preloader ── */
-  (function () {
-    const pl = document.getElementById('preloader');
-
-    function dismiss() {
-      pl.classList.add('hide');
-      document.body.classList.remove('loading');
-    }
-
-    // After progress bar finishes (~2.8s) + small buffer, hide preloader
-    window.addEventListener('load', function () {
-      // minimum display time: 2800ms so the animation plays fully
-      const elapsed = performance.now();
-      const remaining = Math.max(0, 2800 - elapsed);
-      setTimeout(dismiss, remaining);
+    // Close menu when a link is tapped
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
     });
+  </script>
 
-    // Safety fallback — never block more than 4s
-    setTimeout(dismiss, 4000);
-  })();
-</script>
+  <script>
+    /* ── Preloader ── */
+    (function () {
+      const pl = document.getElementById('preloader');
+
+      function dismiss() {
+        pl.classList.add('hide');
+        document.body.classList.remove('loading');
+      }
+
+      // After progress bar finishes (~2.8s) + small buffer, hide preloader
+      window.addEventListener('load', function () {
+        // minimum display time: 2800ms so the animation plays fully
+        const elapsed = performance.now();
+        const remaining = Math.max(0, 2800 - elapsed);
+        setTimeout(dismiss, remaining);
+      });
+
+      // Safety fallback — never block more than 4s
+      setTimeout(dismiss, 4000);
+    })();
+  </script>
 </body>
+
 </html>

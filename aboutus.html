@@ -1,429 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AboutUs — Aquafold</title>
   <link rel="icon" type="image/png" href="/images/globe.png" />
-  <meta name="description" content="Learn about Aquafold, our journey in sustainable molded fiber packaging engineering, and our mission to minimize single-use plastics." />
+  <meta name="description"
+    content="Learn about Aquafold, our journey in sustainable molded fiber packaging engineering, and our mission to minimize single-use plastics." />
 
   <style>
     :root {
-      --bg:#f6faf7;
-      --surface:#ffffff;
-      --surface-2:#eef7f0;
-      --text:#132219;
-      --muted:#50685a;
-      --line:#d9e6de;
-      --green:#1f7a3a;
-      --green-dark:#165a2b;
-      --blue:#0b5a88;
-      --radius:22px;
-      --shadow:0 18px 40px rgba(12,40,24,.08);
-      --max:1180px;
-      --dark-1:#001f1d;
-      --dark-2:#002c36;
-      --dark-3:#001926;
+      --bg: #f6faf7;
+      --surface: #ffffff;
+      --surface-2: #eef7f0;
+      --text: #132219;
+      --muted: #50685a;
+      --line: #d9e6de;
+      --green: #1f7a3a;
+      --green-dark: #165a2b;
+      --blue: #0b5a88;
+      --radius: 22px;
+      --shadow: 0 18px 40px rgba(12, 40, 24, .08);
+      --max: 1180px;
+      --dark-1: #001f1d;
+      --dark-2: #002c36;
+      --dark-3: #001926;
     }
 
     * {
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
-      scroll-behavior:smooth;
+      scroll-behavior: smooth;
     }
 
     body {
-      background:var(--bg);
-      color:var(--text);
-      font-family:Inter,ui-sans-serif,system-ui,sans-serif;
-      line-height:1.7;
-      overflow-x:hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
     a {
-      text-decoration:none;
-      color:inherit;
+      text-decoration: none;
+      color: inherit;
     }
 
     .image-box img,
     .card img,
     section img:not(.nav-logo):not(.footer-logo) {
-      max-width:100%;
-      display:block;
-      height:auto;
+      max-width: 100%;
+      display: block;
+      height: auto;
     }
 
     .container {
-      width:min(var(--max), calc(100% - 36px));
-      margin:0 auto;
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
     }
 
     .nav {
-      position:sticky;
-      top:0;
-      z-index:999;
-      background:#0B1F33;
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid rgba(255,255,255,.08);
-      box-shadow:0 12px 36px rgba(0,0,0,.18);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #0B1F33;
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, .18);
     }
 
     .nav-inner {
-      min-height:76px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .brand {
-      color:#fff;
-      font-weight:800;
-      letter-spacing:.12em;
-      font-size:1rem;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: .12em;
+      font-size: 1rem;
     }
 
     .nav-links {
-      display:flex;
-      align-items:center;
-      gap:22px;
-      flex-wrap:wrap;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
-      color:rgba(255,255,255,.72);
-      font-size:.95rem;
-      transition:.25s ease;
+      color: rgba(255, 255, 255, .72);
+      font-size: .95rem;
+      transition: .25s ease;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color:#fff;
-      transform:translateY(-1px);
+      color: #fff;
+      transform: translateY(-1px);
     }
 
     .btn {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      padding:0 22px;
-      border-radius:999px;
-      font-weight:700;
-      transition:.3s ease;
-      position:relative;
-      overflow:hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: .3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
     .btn-primary {
-      background:rgba(255,255,255,.1);
-      color:#fff;
-      border:1px solid rgba(255,255,255,.14);
-      backdrop-filter:blur(10px);
+      background: rgba(255, 255, 255, .1);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, .14);
+      backdrop-filter: blur(10px);
     }
 
     .btn-primary:hover {
-      transform:translateY(-2px);
-      background:rgba(255,255,255,.16);
-      box-shadow:0 14px 32px rgba(0,0,0,.18);
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, .16);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, .18);
     }
 
     .btn-secondary {
-      border:1px solid var(--line);
-      color:var(--text);
-      background:#fff;
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: #fff;
     }
 
     .btn-secondary:hover {
-      transform:translateY(-2px);
-      border-color:var(--green);
-      color:var(--green-dark);
+      transform: translateY(-2px);
+      border-color: var(--green);
+      color: var(--green-dark);
     }
 
     section {
-      padding:88px 0;
-      position:relative;
+      padding: 88px 0;
+      position: relative;
     }
 
     .hero {
-      padding:110px 0 80px;
-      overflow:hidden;
+      padding: 110px 0 80px;
+      overflow: hidden;
     }
 
     .hero::before {
-      content:"";
-      position:absolute;
-      right:-120px;
-      top:-80px;
-      width:520px;
-      height:520px;
-      border-radius:50%;
-      background:radial-gradient(circle,rgba(31,122,58,.09),transparent 72%);
-      pointer-events:none;
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -80px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(31, 122, 58, .09), transparent 72%);
+      pointer-events: none;
     }
 
     .hero-grid,
     .feature-grid,
     .alt-grid,
     .grid-3 {
-      display:grid;
-      gap:32px;
-      align-items:center;
+      display: grid;
+      gap: 32px;
+      align-items: center;
     }
 
     .hero-grid {
-      grid-template-columns:1.1fr .9fr;
+      grid-template-columns: 1.1fr .9fr;
     }
 
     .feature-grid,
     .alt-grid {
-      grid-template-columns:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
     }
 
     .grid-3 {
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .eyebrow {
-      display:inline-flex;
-      align-items:center;
-      padding:8px 14px;
-      border-radius:999px;
-      background:var(--surface-2);
-      color:var(--green-dark);
-      font-size:.78rem;
-      letter-spacing:.1em;
-      font-weight:700;
-      text-transform:uppercase;
-      margin-bottom:20px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--green-dark);
+      font-size: .78rem;
+      letter-spacing: .1em;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
-    h1,h2,h3 {
-      line-height:1.1;
-      margin-bottom:18px;
+    h1,
+    h2,
+    h3 {
+      line-height: 1.1;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size:clamp(3rem,5vw,5.4rem);
-      max-width:14ch;
+      font-size: clamp(3rem, 5vw, 5.4rem);
+      max-width: 14ch;
     }
 
     h2 {
-      font-size:clamp(2rem,3vw,2.8rem);
+      font-size: clamp(2rem, 3vw, 2.8rem);
     }
 
     h3 {
-      font-size:1.22rem;
+      font-size: 1.22rem;
     }
 
     p {
-      color:var(--muted);
-      margin-bottom:16px;
+      color: var(--muted);
+      margin-bottom: 16px;
     }
 
     .section-head {
-      max-width:760px;
-      margin-bottom:34px;
+      max-width: 760px;
+      margin-bottom: 34px;
     }
 
     .card,
     .highlight,
     .image-box {
-      background:var(--surface);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      transition:.35s ease;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: .35s ease;
     }
 
     .card,
     .highlight {
-      padding:28px;
+      padding: 28px;
     }
 
     .card:hover,
     .highlight:hover,
     .image-box:hover {
-      transform:translateY(-8px);
-      box-shadow:0 28px 60px rgba(10,40,24,.12);
+      transform: translateY(-8px);
+      box-shadow: 0 28px 60px rgba(10, 40, 24, .12);
     }
 
     .image-box {
-      min-height:320px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:24px;
-      color:var(--muted);
-      background:linear-gradient(145deg,#f1f8f3,#ffffff 60%,#edf6fb);
-      overflow:hidden;
-      position:relative;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      background: linear-gradient(145deg, #f1f8f3, #ffffff 60%, #edf6fb);
+      overflow: hidden;
+      position: relative;
     }
 
     .image-box::before {
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);
-      transform:translateX(-120%);
-      transition:1.2s ease;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .45), transparent);
+      transform: translateX(-120%);
+      transition: 1.2s ease;
     }
 
     .image-box:hover::before {
-      transform:translateX(120%);
+      transform: translateX(120%);
     }
 
     .image-box.tall {
-      min-height:450px;
+      min-height: 450px;
     }
 
     .bullet-list {
-      padding-left:18px;
-      color:var(--muted);
-      margin-top:14px;
+      padding-left: 18px;
+      color: var(--muted);
+      margin-top: 14px;
     }
 
     .bullet-list li {
-      margin-bottom:10px;
+      margin-bottom: 10px;
     }
 
     .cta-row {
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:26px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
     }
 
     .highlight {
-      border-left:4px solid var(--blue);
+      border-left: 4px solid var(--blue);
     }
 
     .footer {
-      margin-top:60px;
-      background:#0B1F33;
-      border-top:1px solid rgba(255,255,255,.08);
-      color:#e7f5ef;
-      overflow:hidden;
-      position:relative;
+      margin-top: 60px;
+      background: #0B1F33;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      color: #e7f5ef;
+      overflow: hidden;
+      position: relative;
     }
 
     .footer-grid {
-      display:grid;
-      grid-template-columns:1.4fr 1fr 1fr 1fr;
-      gap:48px;
-      padding:80px 0 56px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding: 80px 0 56px;
     }
 
     .footer-brand p {
-      color:rgba(231,245,239,.72);
-      max-width:300px;
+      color: rgba(231, 245, 239, .72);
+      max-width: 300px;
     }
 
     .footer-social {
-      display:flex;
-      gap:12px;
-      margin-top:28px;
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
     }
 
     .social-circle {
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      color:#fff;
-      transition:.3s ease;
-      overflow:hidden;
-      flex-shrink:0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      color: #fff;
+      transition: .3s ease;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
     .social-circle img {
-      display:block;
-      width:auto;
-      height:auto;
-      max-width:32px;
-      max-height:32px;
-      object-fit:contain;
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 32px;
+      max-height: 32px;
+      object-fit: contain;
     }
 
     .social-circle:hover {
-      transform:translateY(-4px);
-      background:rgba(255,255,255,.12);
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, .12);
     }
 
     .footer-col h4 {
-      color:#fff;
-      font-size:.95rem;
-      letter-spacing:.08em;
-      margin-bottom:22px;
-      text-transform:uppercase;
+      color: #fff;
+      font-size: .95rem;
+      letter-spacing: .08em;
+      margin-bottom: 22px;
+      text-transform: uppercase;
     }
 
     .footer-col a {
-      display:block;
-      color:rgba(231,245,239,.72);
-      margin-bottom:14px;
-      transition:.25s ease;
+      display: block;
+      color: rgba(231, 245, 239, .72);
+      margin-bottom: 14px;
+      transition: .25s ease;
     }
 
     .footer-col a:hover {
-      color:#fff;
-      transform:translateX(4px);
+      color: #fff;
+      transform: translateX(4px);
     }
 
     .footer-bottom {
-      border-top:1px solid rgba(255,255,255,.08);
-      padding:30px 0 36px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-      color:rgba(231,245,239,.64);
-      font-size:.92rem;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding: 30px 0 36px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: rgba(231, 245, 239, .64);
+      font-size: .92rem;
     }
 
     /* ── Hamburger button ── */
     .nav-toggle {
-      display:none;
-      flex-direction:column;
-      justify-content:center;
-      gap:5px;
-      width:40px;
-      height:40px;
-      background:none;
-      border:none;
-      cursor:pointer;
-      padding:4px;
-      flex-shrink:0;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-shrink: 0;
     }
 
     .nav-toggle span {
-      display:block;
-      height:2px;
-      width:100%;
-      background:#fff;
-      border-radius:2px;
-      transition:transform .3s ease, opacity .3s ease;
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease;
     }
 
-    .nav-toggle.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity:0; }
-    .nav-toggle.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .nav-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
 
-    a.btn.btn-primary{
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    a.btn.btn-primary {
       color: white;
       background-color: #014226;
     }
 
-    a.btn.btn-secondary{
+    a.btn.btn-secondary {
       color: white;
       background-color: #014226;
     }
@@ -433,23 +445,28 @@
       .hero-grid {
         grid-template-columns: 1fr;
       }
+
       .feature-grid,
       .alt-grid {
         grid-template-columns: 1fr 1fr;
         gap: 24px;
       }
+
       .grid-3 {
         grid-template-columns: 1fr 1fr;
         gap: 24px;
       }
+
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 32px;
         padding: 52px 0 36px;
       }
+
       .hero {
         padding: 72px 0 56px;
       }
+
       /* On tablet, hero image comes second — reorder */
       .hero-grid .image-box {
         order: -1;
@@ -458,8 +475,10 @@
 
     /* ── Mobile (720px) ── */
     @media (max-width:720px) {
+
       /* Global overflow prevention */
-      html, body {
+      html,
+      body {
         overflow-x: hidden;
         max-width: 100vw;
       }
@@ -473,6 +492,7 @@
       .nav-toggle {
         display: flex;
       }
+
       .nav-inner {
         flex-wrap: wrap;
         padding: 10px 0;
@@ -480,6 +500,7 @@
         gap: 0;
         min-height: 60px;
       }
+
       .nav-links {
         display: none;
         flex-direction: column;
@@ -488,18 +509,22 @@
         width: 100%;
         padding: 4px 0 14px;
       }
+
       .nav-links.open {
         display: flex;
       }
+
       .nav-links a {
         width: 100%;
         padding: 13px 6px;
-        border-bottom: 1px solid rgba(255,255,255,.07);
+        border-bottom: 1px solid rgba(255, 255, 255, .07);
         font-size: 1rem;
       }
+
       .nav-links a:last-child {
         border-bottom: none;
       }
+
       .nav-links .btn {
         margin-top: 12px;
         width: 100%;
@@ -513,6 +538,7 @@
         width: 90px !important;
         height: auto !important;
       }
+
       .footer-brand .brand img,
       .footer-brand a img {
         width: 140px !important;
@@ -533,6 +559,7 @@
       .hero {
         padding: 48px 0 36px;
       }
+
       .hero::before {
         display: none;
       }
@@ -543,9 +570,11 @@
         min-height: 220px;
         padding: 12px;
       }
+
       .image-box.tall {
         min-height: 240px;
       }
+
       .image-box img,
       .image-box video {
         max-width: 100% !important;
@@ -558,6 +587,7 @@
       .hero-grid .image-box {
         order: 1;
       }
+
       /* alt-grid: image before text on desktop — keep text first on mobile */
       .alt-grid .image-box {
         order: 1;
@@ -569,10 +599,12 @@
         max-width: 100%;
         line-height: 1.15;
       }
+
       h2 {
         font-size: clamp(1.5rem, 5.5vw, 2rem);
         line-height: 1.15;
       }
+
       h3 {
         font-size: 1.08rem;
       }
@@ -588,6 +620,7 @@
         align-items: stretch;
         gap: 10px;
       }
+
       .cta-row .btn {
         width: 100%;
         text-align: center;
@@ -605,8 +638,9 @@
       .highlight h3 {
         margin-top: 24px;
       }
+
       .highlight h3:first-child,
-      .highlight > h3:first-of-type {
+      .highlight>h3:first-of-type {
         margin-top: 0;
       }
 
@@ -620,9 +654,11 @@
         gap: 28px;
         padding: 40px 0 20px;
       }
+
       .footer-brand p {
         max-width: 100%;
       }
+
       .footer-bottom {
         flex-direction: column;
         gap: 8px;
@@ -632,16 +668,19 @@
 
       /* Prevent hover-lift on touch devices */
       @media (hover: none) {
+
         .card:hover,
         .highlight:hover,
         .image-box:hover {
           transform: none;
           box-shadow: var(--shadow);
         }
+
         .btn-primary:hover,
         .btn-secondary:hover {
           transform: none;
         }
+
         .footer-col a:hover {
           transform: none;
         }
@@ -653,17 +692,26 @@
       .container {
         width: calc(100% - 24px);
       }
-      h1 { font-size: 1.9rem; }
-      h2 { font-size: 1.45rem; }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      h2 {
+        font-size: 1.45rem;
+      }
+
       .btn {
         font-size: .9rem;
         padding: 0 18px;
         min-height: 48px;
       }
+
       .card,
       .highlight {
         padding: 16px;
       }
+
       .eyebrow {
         font-size: .72rem;
       }
@@ -671,22 +719,27 @@
 
     /* Disable hover lift on touch devices (all screen sizes) */
     @media (hover: none) {
+
       .card:hover,
       .highlight:hover,
       .image-box:hover {
         transform: none;
         box-shadow: var(--shadow);
       }
+
       .btn-primary:hover,
       .btn-secondary:hover {
         transform: none;
       }
+
       .social-circle:hover {
         transform: none;
       }
+
       .footer-col a:hover {
         transform: none;
       }
+
       .nav-links a:hover {
         transform: none;
       }
@@ -714,7 +767,7 @@
       pointer-events: none;
     }
 
-    body.loading > *:not(#preloader) {
+    body.loading>*:not(#preloader) {
       visibility: hidden;
     }
 
@@ -735,25 +788,29 @@
       animation-iteration-count: 1;
     }
 
-.earth p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0.25em;
-  font-size: 1.25em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 700; /* Makes the split colors pop nicely */
-}
+    .earth p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0.25em;
+      font-size: 1.25em;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-weight: 700;
+      /* Makes the split colors pop nicely */
+    }
 
-/* Color for the first half */
-.earth p .text-aqua {
-  color: #0b5a88; /* Brand Green */
-}
+    /* Color for the first half */
+    .earth p .text-aqua {
+      color: #0b5a88;
+      /* Brand Green */
+    }
 
-/* Color for the second half */
-.earth p .text-fold {
-  color: #1f7a3a; /* Dark Charcoal/Black */
-}
+    /* Color for the second half */
+    .earth p .text-fold {
+      color: #1f7a3a;
+      /* Dark Charcoal/Black */
+    }
+
     .earth-loader svg:nth-child(1) {
       position: absolute;
       bottom: -2em;
@@ -787,8 +844,16 @@
     }
 
     @keyframes startround {
-      0% { filter: brightness(500%); box-shadow: none; }
-      75% { filter: brightness(500%); box-shadow: none; }
+      0% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
+      75% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
       100% {
         filter: brightness(100%);
         box-shadow:
@@ -798,295 +863,380 @@
     }
 
     @keyframes round1 {
-      0%  { left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      30% { left: -6em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      31% { left: -6em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      35% { left: 7em;  opacity: 0%;   transform: skewX(25deg) rotate(-25deg); }
-      45% { left: 7em;  opacity: 100%; transform: skewX(25deg) rotate(-25deg); }
-      100%{ left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
+      0% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+
+      30% {
+        left: -6em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      31% {
+        left: -6em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      35% {
+        left: 7em;
+        opacity: 0%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      45% {
+        left: 7em;
+        opacity: 100%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      100% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
     }
 
     @keyframes round2 {
-      0%  { left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      75% { left: -7em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      76% { left: -7em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      77% { left: 8em;  opacity: 0%;   transform: skewX(25deg) rotate(-25deg); }
-      80% { left: 8em;  opacity: 100%; transform: skewX(25deg) rotate(-25deg); }
-      100%{ left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-    }
+      0% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
 
+      75% {
+        left: -7em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      76% {
+        left: -7em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      77% {
+        left: 8em;
+        opacity: 0%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      80% {
+        left: 8em;
+        opacity: 100%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      100% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+    }
   </style>
 </head>
+
 <body class="loading">
 
-<!-- ══ PRELOADER ══ -->
-<div id="preloader">
-  <div class="earth">
-    <div class="earth-loader">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z" fill="#ffffff"></path>
-      </svg>
+  <!-- ══ PRELOADER ══ -->
+  <div id="preloader">
+    <div class="earth">
+      <div class="earth-loader">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z"
+            fill="#ffffff"></path>
+        </svg>
+      </div>
+      <p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>
     </div>
-<p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>  </div>
-</div>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;"><img src="/images/aquafoldlogo.png" alt="logo" width="130" style="flex-shrink:0;"></a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="aboutus.html" class="active">About us</a>
-      <a href="features.html">Features</a>
-      <a href="products.html">Products</a>
-      <a href="technology.html">Technology</a>
-      <a href="work-with-us.html">Work With Us</a>
-    </nav>
   </div>
-</header>
 
-<main>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;"><img
+          src="/images/aquafoldlogo.png" alt="logo" width="130" style="flex-shrink:0;"></a>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Our Identity</span>
-        <h2>Building India's Molded Fiber Packaging Future.</h2>
-        <p>
-          Aquafold develops molded fiber food and beverage packaging using agricultural waste and plant-based materials, with compostability and performance being validated through development.
-        </p>
-        <div class="cta-row">
-          <a href="#about-us" class="btn btn-primary">Discover Our Journey</a>
-          <a href="#our-mission" class="btn btn-secondary">Read Our Mission</a>
-        </div>
-      </div>
-      <div class="image-box tall">
-        <img src="new/1st image (About us).jpg" alt="photo" height="700" width="700">
-      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="aboutus.html" class="active">About us</a>
+        <a href="features.html">Features</a>
+        <a href="products.html">Products</a>
+        <a href="technology.html">Technology</a>
+        <a href="work-with-us.html">Work With Us</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- ABOUT US SECTION -->
-  <section id="about-us">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">About Us</span>
-        <h2>Rooted in structural innovation and pure design.</h2>
-      </div>
+  <main>
 
-      <div class="feature-grid">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
         <div>
-          <div class="card">
-            <h3>Who We Are</h3>
-            <p>
-              Aquafold started with a simple observation: India's packaging problem isn't a lack of alternatives — it's that alternatives are often positioned as incremental improvements over plastic, competing on plastic's terms.
-            </p>
-            <ul class="bullet-list">
-              <li>India generates 10–12 million tonnes of bagasse annually, a fibrous sugarcane byproduct that is low-cost, partially processed, and widely available.</li>
-              <li>Aquafold uses bagasse as a manufacturing feedstock for molded fiber packaging.</li>
-              <!-- <li>The company focuses on building scalable manufacturing capability, delivering packaging that succeeds on performance and economics rather than sustainability messaging alone.</li> -->
-              <li>Its first product line includes molded fiber food-service packaging such as plates, bowls, containers, and takeout boxes for restaurants, cloud kitchens, and catering businesses.</li>
-              <li>The second product line is under development which will be molded fiber bottles which are undergoing structural design and validation.</li>
-              <!-- <li>Aquafold is in the prototype and manufacturing setup phase, targeting a factory launch in Karnataka by September 2026, with food-service products entering pilot production before bottle-scale manufacturing.</li> -->
-            </ul>
+          <span class="eyebrow">Our Identity</span>
+          <h2>Building India's Molded Fiber Packaging Future.</h2>
+          <p>
+            Aquafold develops molded fiber food and beverage packaging using agricultural waste and plant-based
+            materials, with compostability and performance being validated through development.
+          </p>
+          <div class="cta-row">
+            <a href="#about-us" class="btn btn-primary">Discover Our Journey</a>
+            <a href="#our-mission" class="btn btn-secondary">Read Our Mission</a>
           </div>
         </div>
-
-        <div class="image-box">
-          <img src="new/image.png" alt="Molded agricultural fiber composition" height="600" width="600">
+        <div class="image-box tall">
+          <img src="new/1st image (About us).jpg" alt="photo" height="700" width="700">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- OUR MISSION SECTION -->
-  <section id="our-mission">
-    <div class="container">
-      <div class="alt-grid">
-        <div class="image-box">
-          <img src="new/3rd image (new).png" alt="Eco-friendly end of life breakdown structural design" width="700" height="700">
+    <!-- ABOUT US SECTION -->
+    <section id="about-us">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">About Us</span>
+          <h2>Rooted in structural innovation and pure design.</h2>
         </div>
 
-        <div>
-          <span class="eyebrow">Our Mission</span>
-          <h2>To build scalable molded fiber packaging systems that reduce dependence on single-use plastic.</h2>
-          <!-- <p>
+        <div class="feature-grid">
+          <div>
+            <div class="card">
+              <h3>Who We Are</h3>
+              <p>
+                Aquafold started with a simple observation: India's packaging problem isn't a lack of alternatives —
+                it's that alternatives are often positioned as incremental improvements over plastic, competing on
+                plastic's terms.
+              </p>
+              <ul class="bullet-list">
+                <li>India generates 10–12 million tonnes of bagasse annually, a fibrous sugarcane byproduct that is
+                  low-cost, partially processed, and widely available.</li>
+                <li>Aquafold uses bagasse as a manufacturing feedstock for molded fiber packaging.</li>
+                <!-- <li>The company focuses on building scalable manufacturing capability, delivering packaging that succeeds on performance and economics rather than sustainability messaging alone.</li> -->
+                <li>Its first product line includes molded fiber food-service packaging such as plates, bowls,
+                  containers, and takeout boxes for restaurants, cloud kitchens, and catering businesses.</li>
+                <li>The second product line is under development which will be molded fiber bottles which are undergoing
+                  structural design and validation.</li>
+                <!-- <li>Aquafold is in the prototype and manufacturing setup phase, targeting a factory launch in Karnataka by September 2026, with food-service products entering pilot production before bottle-scale manufacturing.</li> -->
+              </ul>
+            </div>
+          </div>
+
+          <div class="image-box">
+            <img src="new/image.png" alt="Molded agricultural fiber composition" height="600" width="600">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR MISSION SECTION -->
+    <section id="our-mission">
+      <div class="container">
+        <div class="alt-grid">
+          <div class="image-box">
+            <img src="new/3rd image (new).png" alt="Eco-friendly end of life breakdown structural design" width="700"
+              height="700">
+          </div>
+
+          <div>
+            <span class="eyebrow">Our Mission</span>
+            <h2>To build scalable molded fiber packaging systems that reduce dependence on single-use plastic.</h2>
+            <!-- <p>
             We don't start from ideology. We start from engineering constraints: material availability, forming limits, moisture resistance, stackability, supply chain integration, cost structure, and end-of-life disposal. If a solution can't work at 100,000 units per month within 18 months, it's not a solution — it's still a prototype.
           </p> -->
 
-          <div class="card">
-            <h3>Our Approach</h3>
-            <p>
-              Material-first, not product-first: We develop barrier coatings, fiber blends, and forming processes that unlock new applications — then design products around what the material can do.
-            </p>
-            <ul class="bullet-list">
-              <li>Manufacturing-led, not marketing-led: Product launches are gated by production readiness, not pitch decks or crowdfunding timelines.</li>
-              <li>B2B-focused, not consumer-retail: We sell to businesses with volume commitments and supply chain discipline.</li>
-              <li>Local production: Karnataka-based manufacturing reduces logistics costs, supports regional agro-waste utilization, and shortens iteration cycles.</li>
-            </ul>
+            <div class="card">
+              <h3>Our Approach</h3>
+              <p>
+                Material-first, not product-first: We develop barrier coatings, fiber blends, and forming processes that
+                unlock new applications — then design products around what the material can do.
+              </p>
+              <ul class="bullet-list">
+                <li>Manufacturing-led, not marketing-led: Product launches are gated by production readiness, not pitch
+                  decks or crowdfunding timelines.</li>
+                <li>B2B-focused, not consumer-retail: We sell to businesses with volume commitments and supply chain
+                  discipline.</li>
+                <li>Local production: Karnataka-based manufacturing reduces logistics costs, supports regional
+                  agro-waste utilization, and shortens iteration cycles.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
 
 
     <section>
+      <div class="container">
+
+        <div class="highlight">
+          <span class="eyebrow">5-Year Plan</span>
+          <h3>Year 1-2 (2026-2027): Factory Launch & Food-Service Line</h3>
+
+          <ul class="bullet-list">
+            <li>Commission molded fiber production facility (September 2026 target)</li>
+            <li>Pilot production of food-service packaging: plates, bowls, containers (The Carry, The Pour, The Serve,
+              The Gather)</li>
+            <li>Pursue FSSAI compliance, KSPCB clearance, and compostability testing</li>
+            <li>Onboard initial B2B customers: cloud kitchens, QSR chains, catering companies</li>
+          </ul>
+
+
+
+          <h3>Year 2-3 (2027-2028): Bottle Production & Scale</h3>
+
+          <ul class="bullet-list">
+            <li>Complete structural validation and prototype testing of 1-litre molded fiber bottle (The Vessel)</li>
+            <li>Set up bottle-specific tooling and production line</li>
+            <li>Launch pilot production with beverage brand partners</li>
+            <li>Pursue additional certifications: FSC, third-party migration testing, ISO 9001</li>
+          </ul>
+
+
+          <h3>Year 3-5 (2028-2030): Market Penetration & New Applications</h3>
+
+          <ul class="bullet-list">
+            <li>Achieve commercial-scale bottle production (100,000+ bottles/month)</li>
+            <li>Develop custom B2B solutions for enterprise clients</li>
+            <li>Expand geographic distribution: Maharashtra, Tamil Nadu, Delhi NCR</li>
+            <li>Target production capacity: 2-5 million units/month across all product lines</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+  </main>
+
+  <footer class="footer">
     <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
+            <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
+          </div>
+          <p>
+            Purity, Beautifully Engineered.<br>
+            Designed in INDIA.<br>
+            Made for everywhere.
+          </p>
 
-      <div class="highlight">
-        <span class="eyebrow">5-Year Plan</span>
-        <h3>Year 1-2 (2026-2027): Factory Launch & Food-Service Line</h3>
-
-        <ul class="bullet-list">
-              <li>Commission molded fiber production facility (September 2026 target)</li>
-              <li>Pilot production of food-service packaging: plates, bowls, containers (The Carry, The Pour, The Serve, The Gather)</li>
-              <li>Pursue FSSAI compliance, KSPCB clearance, and compostability testing</li>
-              <li>Onboard initial B2B customers: cloud kitchens, QSR chains, catering companies</li>
-            </ul>
-
-
-
-        <h3>Year 2-3 (2027-2028): Bottle Production & Scale</h3>
-
-        <ul class="bullet-list">
-              <li>Complete structural validation and prototype testing of 1-litre molded fiber bottle (The Vessel)</li>
-              <li>Set up bottle-specific tooling and production line</li>
-              <li>Launch pilot production with beverage brand partners</li>
-              <li>Pursue additional certifications: FSC, third-party migration testing, ISO 9001</li>
-            </ul>
-
-
-        <h3>Year 3-5 (2028-2030): Market Penetration & New Applications</h3>
-
-        <ul class="bullet-list">
-              <li>Achieve commercial-scale bottle production (100,000+ bottles/month)</li>
-              <li>Develop custom B2B solutions for enterprise clients</li>
-              <li>Expand geographic distribution: Maharashtra, Tamil Nadu, Delhi NCR</li>
-              <li>Target production capacity: 2-5 million units/month across all product lines</li>
-            </ul>
-
-      </div>
-
-    </div>
-  </section>
-
-
-
-
-
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
-          <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
+          <div class="footer-social">
+            <div class="social-circle">
+              <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png"
+                  alt="photo" width="20"></a>
+            </div>
+            <div class="social-circle">
+              <a href="mailto:aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo"
+                  width="25"></a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank"
+                class="social-btn"><img src="/images/insta.png" alt="photo" width="29"></a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img
+                  src="/images/linkedin.png" alt="photo" width="30"></a>
+            </div>
+          </div>
         </div>
-        <p>
-          Purity, Beautifully Engineered.<br>
-          Designed in INDIA.<br>
-          Made for everywhere.
-        </p>
 
-        <div class="footer-social">
-          <div class="social-circle">
-            <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png" alt="photo" width="20"></a>
-          </div>
-          <div class="social-circle">
-            <a href="mailto:aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo" width="25"></a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank" class="social-btn"><img src="/images/insta.png" alt="photo" width="29"></a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img src="/images/linkedin.png" alt="photo" width="30"></a>
-          </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="products.html">The Carry — Clamshell Boxes</a>
+          <a href="products.html">The Pour — Beverage Holders</a>
+          <a href="products.html">The Gather — Cutlery</a>
+          <a href="products.html">The Serve — Bowls & Plates</a>
+          <a href="products.html">The Vessel — Bottles</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="aboutus.html">About Us</a>
+          <a href="aboutus.html#our-mission">Our Mission</a>
+          <a href="whyaf.html">Why Aquafold</a>
+          <a href="work-with-us.html#partners">Partnership</a>
+          <a href="work-with-us.html#investors">Investors</a>
+          <a href="work-with-us.html">Careers</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="work-with-us.html">Contact Us</a>
+          <a href="work-with-us.html">Privacy Policy</a>
+          <a href="work-with-us.html">Terms of Service</a>
         </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Products</h4>
-        <a href="products.html">The Carry — Clamshell Boxes</a>
-        <a href="products.html">The Pour — Beverage Holders</a>
-        <a href="products.html">The Gather — Cutlery</a>
-        <a href="products.html">The Serve — Bowls & Plates</a>
-        <a href="products.html">The Vessel — Bottles</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="aboutus.html">About Us</a>
-        <a href="aboutus.html#our-mission">Our Mission</a>
-        <a href="whyaf.html">Why Aquafold</a>
-        <a href="work-with-us.html#partners">Partnership</a>
-        <a href="work-with-us.html#investors">Investors</a>
-        <a href="work-with-us.html">Careers</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Support</h4>
-        <a href="faq.html">FAQ</a>
-        <a href="work-with-us.html">Contact Us</a>
-        <a href="work-with-us.html">Privacy Policy</a>
-        <a href="work-with-us.html">Terms of Service</a>
+      <div class="footer-bottom">
+        <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
       </div>
     </div>
+  </footer>
 
-    <div class="footer-bottom">
-      <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const toggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
     });
-  });
-</script>
-
-<script>
-  /* ── Preloader ── */
-  (function () {
-    const pl = document.getElementById('preloader');
-    function dismiss() {
-      pl.classList.add('hide');
-      document.body.classList.remove('loading');
-    }
-    window.addEventListener('load', function () {
-      const elapsed = performance.now();
-      const remaining = Math.max(0, 2800 - elapsed);
-      setTimeout(dismiss, remaining);
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
     });
-    setTimeout(dismiss, 4000);
-  })();
-</script>
+  </script>
+
+  <script>
+    /* ── Preloader ── */
+    (function () {
+      const pl = document.getElementById('preloader');
+      function dismiss() {
+        pl.classList.add('hide');
+        document.body.classList.remove('loading');
+      }
+      window.addEventListener('load', function () {
+        const elapsed = performance.now();
+        const remaining = Math.max(0, 2800 - elapsed);
+        setTimeout(dismiss, remaining);
+      });
+      setTimeout(dismiss, 4000);
+    })();
+  </script>
 </body>
+
 </html>

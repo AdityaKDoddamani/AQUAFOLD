@@ -1,192 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FQA — Aquafold</title>
   <link rel="icon" type="image/png" href="/images/globe.png" />
-  <meta name="description" content="Find answers to common questions about Aquafold's plant-based materials, manufacturing processes, home compostability, and ordering pipelines." />
+  <meta name="description"
+    content="Find answers to common questions about Aquafold's plant-based materials, manufacturing processes, home compostability, and ordering pipelines." />
 
   <style>
     :root {
-      --bg:#f6faf7;
-      --surface:#ffffff;
-      --surface-2:#eef7f0;
-      --text:#132219;
-      --muted:#50685a;
-      --line:#d9e6de;
-      --green:#1f7a3a;
-      --green-dark:#165a2b;
-      --blue:#0b5a88;
-      --radius:22px;
-      --shadow:0 18px 40px rgba(12,40,24,.08);
-      --max:1180px;
+      --bg: #f6faf7;
+      --surface: #ffffff;
+      --surface-2: #eef7f0;
+      --text: #132219;
+      --muted: #50685a;
+      --line: #d9e6de;
+      --green: #1f7a3a;
+      --green-dark: #165a2b;
+      --blue: #0b5a88;
+      --radius: 22px;
+      --shadow: 0 18px 40px rgba(12, 40, 24, .08);
+      --max: 1180px;
     }
 
     * {
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
-      scroll-behavior:smooth;
+      scroll-behavior: smooth;
     }
 
     body {
-      background:var(--bg);
-      color:var(--text);
-      font-family:Inter,ui-sans-serif,system-ui,sans-serif;
-      line-height:1.7;
-      overflow-x:hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
     a {
-      text-decoration:none;
-      color:inherit;
+      text-decoration: none;
+      color: inherit;
     }
 
     .image-box img,
     section img:not(.nav-logo):not(.footer-logo) {
-      max-width:100%;
-      display:block;
-      height:auto;
+      max-width: 100%;
+      display: block;
+      height: auto;
     }
 
     .container {
-      width:min(var(--max), calc(100% - 36px));
-      margin:0 auto;
+      width: min(var(--max), calc(100% - 36px));
+      margin: 0 auto;
     }
 
     /* ── Navigation ── */
     .nav {
-      position:sticky;
-      top:0;
-      z-index:999;
-      background:#0B1F33;
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid rgba(255,255,255,.08);
-      box-shadow:0 12px 36px rgba(0,0,0,.18);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #0B1F33;
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, .18);
     }
 
     .nav-inner {
-      min-height:76px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .brand {
-      color:#fff;
-      font-weight:800;
-      letter-spacing:.12em;
-      font-size:1rem;
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: .12em;
+      font-size: 1rem;
     }
 
     .nav-links {
-      display:flex;
-      align-items:center;
-      gap:22px;
-      flex-wrap:wrap;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
-      color:rgba(255,255,255,.72);
-      font-size:.95rem;
-      transition:.25s ease;
+      color: rgba(255, 255, 255, .72);
+      font-size: .95rem;
+      transition: .25s ease;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color:#fff;
-      transform:translateY(-1px);
+      color: #fff;
+      transform: translateY(-1px);
     }
 
     /* ── Buttons ── */
     .btn {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:48px;
-      padding:0 22px;
-      border-radius:999px;
-      font-weight:700;
-      transition:.3s ease;
-      position:relative;
-      overflow:hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: .3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
     .btn-primary {
       color: white;
       background-color: #014226;
-      border: 1px solid rgba(255,255,255,.14);
+      border: 1px solid rgba(255, 255, 255, .14);
     }
 
     .btn-primary:hover {
-      transform:translateY(-2px);
+      transform: translateY(-2px);
       background-color: #165a2b;
-      box-shadow:0 14px 32px rgba(0,0,0,.18);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, .18);
     }
 
     .btn-secondary {
       color: white;
       background-color: #014226;
-      border:1px solid var(--line);
+      border: 1px solid var(--line);
     }
 
     .btn-secondary:hover {
-      transform:translateY(-2px);
+      transform: translateY(-2px);
       background-color: #165a2b;
     }
 
     /* ── Section Sizing ── */
     section {
-      padding:88px 0;
-      position:relative;
+      padding: 88px 0;
+      position: relative;
     }
 
     .hero {
-      padding:110px 0 60px;
-      overflow:hidden;
+      padding: 110px 0 60px;
+      overflow: hidden;
     }
 
     .eyebrow {
-      display:inline-flex;
-      align-items:center;
-      padding:8px 14px;
-      border-radius:999px;
-      background:var(--surface-2);
-      color:var(--green-dark);
-      font-size:.78rem;
-      letter-spacing:.1em;
-      font-weight:700;
-      text-transform:uppercase;
-      margin-bottom:20px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      color: var(--green-dark);
+      font-size: .78rem;
+      letter-spacing: .1em;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
-    h1,h2,h3 {
-      line-height:1.1;
-      margin-bottom:18px;
+    h1,
+    h2,
+    h3 {
+      line-height: 1.1;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size:clamp(3rem,5vw,5.4rem);
-      max-width:14ch;
+      font-size: clamp(3rem, 5vw, 5.4rem);
+      max-width: 14ch;
     }
 
     h2 {
-      font-size:clamp(2rem,3vw,2.8rem);
+      font-size: clamp(2rem, 3vw, 2.8rem);
     }
 
     p {
-      color:var(--muted);
-      margin-bottom:16px;
+      color: var(--muted);
+      margin-bottom: 16px;
     }
 
     .section-head {
-      max-width:760px;
-      margin-bottom:48px;
+      max-width: 760px;
+      margin-bottom: 48px;
     }
 
     /* ── Accordion Layout ── */
@@ -207,7 +211,7 @@
 
     .faq-item:hover {
       transform: translateY(-2px);
-      box-shadow: 0 22px 48px rgba(12,40,24,.1);
+      box-shadow: 0 22px 48px rgba(12, 40, 24, .1);
     }
 
     .faq-trigger {
@@ -266,127 +270,136 @@
 
     /* ── Footer ── */
     .footer {
-      margin-top:60px;
-      background:#0B1F33;
-      border-top:1px solid rgba(255,255,255,.08);
-      color:#e7f5ef;
-      overflow:hidden;
-      position:relative;
+      margin-top: 60px;
+      background: #0B1F33;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      color: #e7f5ef;
+      overflow: hidden;
+      position: relative;
     }
 
     .footer-grid {
-      display:grid;
-      grid-template-columns:1.4fr 1fr 1fr 1fr;
-      gap:48px;
-      padding:80px 0 56px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding: 80px 0 56px;
     }
 
     .footer-brand p {
-      color:rgba(231,245,239,.72);
-      max-width:300px;
+      color: rgba(231, 245, 239, .72);
+      max-width: 300px;
     }
 
     .footer-social {
-      display:flex;
-      gap:12px;
-      margin-top:28px;
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
     }
 
     .social-circle {
-      width:48px;
-      height:48px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      color:#fff;
-      transition:.3s ease;
-      overflow:hidden;
-      flex-shrink:0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      color: #fff;
+      transition: .3s ease;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
     .social-circle img {
-      display:block;
-      width:auto;
-      height:auto;
-      max-width:32px;
-      max-height:32px;
-      object-fit:contain;
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 32px;
+      max-height: 32px;
+      object-fit: contain;
     }
 
     .social-circle:hover {
-      transform:translateY(-4px);
-      background:rgba(255,255,255,.12);
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, .12);
     }
 
     .footer-col h4 {
-      color:#fff;
-      font-size:.95rem;
-      letter-spacing:.08em;
-      margin-bottom:22px;
-      text-transform:uppercase;
+      color: #fff;
+      font-size: .95rem;
+      letter-spacing: .08em;
+      margin-bottom: 22px;
+      text-transform: uppercase;
     }
 
     .footer-col a {
-      display:block;
-      color:rgba(231,245,239,.72);
-      margin-bottom:14px;
-      transition:.25s ease;
+      display: block;
+      color: rgba(231, 245, 239, .72);
+      margin-bottom: 14px;
+      transition: .25s ease;
     }
 
     .footer-col a:hover {
-      color:#fff;
-      transform:translateX(4px);
+      color: #fff;
+      transform: translateX(4px);
     }
 
     .footer-bottom {
-      border-top:1px solid rgba(255,255,255,.08);
-      padding:30px 0 36px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-      color:rgba(231,245,239,.64);
-      font-size:.92rem;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      padding: 30px 0 36px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: rgba(231, 245, 239, .64);
+      font-size: .92rem;
     }
 
     /* ── Hamburger button ── */
     .nav-toggle {
-      display:none;
-      flex-direction:column;
-      justify-content:center;
-      gap:5px;
-      width:40px;
-      height:40px;
-      background:none;
-      border:none;
-      cursor:pointer;
-      padding:4px;
-      flex-shrink:0;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-shrink: 0;
     }
 
     .nav-toggle span {
-      display:block;
-      height:2px;
-      width:100%;
-      background:#fff;
-      border-radius:2px;
-      transition:transform .3s ease, opacity .3s ease;
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      border-radius: 2px;
+      transition: transform .3s ease, opacity .3s ease;
     }
 
-    .nav-toggle.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity:0; }
-    .nav-toggle.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .nav-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
 
     /* ── Tablet (980px) ── */
     @media (max-width:980px) {
       .footer-grid {
-        grid-template-columns:1fr 1fr;
-        gap:32px;
-        padding:52px 0 36px;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding: 52px 0 36px;
       }
+
       .faq-layout {
         max-width: 100%;
       }
@@ -394,7 +407,9 @@
 
     /* ── Mobile (720px) ── */
     @media (max-width:720px) {
-      html, body {
+
+      html,
+      body {
         overflow-x: hidden;
         max-width: 100vw;
       }
@@ -407,6 +422,7 @@
       .nav-toggle {
         display: flex;
       }
+
       .nav-inner {
         flex-wrap: wrap;
         padding: 10px 0;
@@ -414,6 +430,7 @@
         gap: 0;
         min-height: 60px;
       }
+
       .nav-links {
         display: none;
         flex-direction: column;
@@ -422,18 +439,22 @@
         width: 100%;
         padding: 4px 0 14px;
       }
+
       .nav-links.open {
         display: flex;
       }
+
       .nav-links a {
         width: 100%;
         padding: 13px 6px;
-        border-bottom: 1px solid rgba(255,255,255,.07);
+        border-bottom: 1px solid rgba(255, 255, 255, .07);
         font-size: 1rem;
       }
+
       .nav-links a:last-child {
         border-bottom: none;
       }
+
       .nav-links .btn {
         margin-top: 12px;
         width: 100%;
@@ -447,6 +468,7 @@
         width: 90px !important;
         height: auto !important;
       }
+
       .footer-brand .brand img,
       .footer-brand a img {
         width: 140px !important;
@@ -457,6 +479,7 @@
       .hero {
         padding: 48px 0 32px;
       }
+
       .section-head {
         text-align: center;
         margin-bottom: 32px;
@@ -468,6 +491,7 @@
         max-width: 100%;
         line-height: 1.15;
       }
+
       h2 {
         font-size: clamp(1.5rem, 5.5vw, 2rem);
         line-height: 1.15;
@@ -482,25 +506,30 @@
       .faq-layout {
         max-width: 100%;
       }
+
       .faq-item {
         border-radius: 14px;
         margin-bottom: 12px;
       }
+
       .faq-trigger {
         padding: 16px 18px;
         gap: 12px;
       }
+
       .faq-trigger h3 {
         font-size: 0.98rem;
         line-height: 1.4;
         word-break: break-word;
       }
+
       .faq-icon {
         width: 28px;
         height: 28px;
         flex-shrink: 0;
         font-size: 1.1rem;
       }
+
       .faq-content-inner {
         padding: 0 18px 18px 18px;
         font-size: 0.93rem;
@@ -521,9 +550,11 @@
         gap: 28px;
         padding: 40px 0 20px;
       }
+
       .footer-brand p {
         max-width: 100%;
       }
+
       .footer-bottom {
         flex-direction: column;
         gap: 8px;
@@ -537,18 +568,25 @@
       .container {
         width: calc(100% - 24px);
       }
-      h2 { font-size: 1.4rem; }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
       .btn {
         font-size: .9rem;
         padding: 0 18px;
         min-height: 48px;
       }
+
       .faq-trigger {
         padding: 14px 14px;
       }
+
       .faq-trigger h3 {
         font-size: 0.93rem;
       }
+
       .faq-content-inner {
         padding: 0 14px 16px 14px;
         font-size: 0.9rem;
@@ -561,22 +599,27 @@
         transform: none;
         box-shadow: var(--shadow);
       }
+
       .btn-primary:hover,
       .btn-secondary:hover {
         transform: none;
       }
+
       .social-circle:hover {
         transform: none;
       }
+
       .footer-col a:hover {
         transform: none;
       }
+
       .nav-links a:hover {
         transform: none;
       }
     }
 
-    html, body {
+    html,
+    body {
       overflow-x: hidden;
       max-width: 100vw;
     }
@@ -603,7 +646,7 @@
       pointer-events: none;
     }
 
-    body.loading > *:not(#preloader) {
+    body.loading>*:not(#preloader) {
       visibility: hidden;
     }
 
@@ -623,25 +666,29 @@
       animation-iteration-count: 1;
     }
 
-.earth p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0.25em;
-  font-size: 1.25em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 700; /* Makes the split colors pop nicely */
-}
+    .earth p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0.25em;
+      font-size: 1.25em;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-weight: 700;
+      /* Makes the split colors pop nicely */
+    }
 
-/* Color for the first half */
-.earth p .text-aqua {
-  color: #0b5a88; /* Brand Green */
-}
+    /* Color for the first half */
+    .earth p .text-aqua {
+      color: #0b5a88;
+      /* Brand Green */
+    }
 
-/* Color for the second half */
-.earth p .text-fold {
-  color: #1f7a3a; /* Dark Charcoal/Black */
-}
+    /* Color for the second half */
+    .earth p .text-fold {
+      color: #1f7a3a;
+      /* Dark Charcoal/Black */
+    }
+
     .earth-loader svg:nth-child(1) {
       position: absolute;
       bottom: -2em;
@@ -675,8 +722,16 @@
     }
 
     @keyframes startround {
-      0% { filter: brightness(500%); box-shadow: none; }
-      75% { filter: brightness(500%); box-shadow: none; }
+      0% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
+      75% {
+        filter: brightness(500%);
+        box-shadow: none;
+      }
+
       100% {
         filter: brightness(100%);
         box-shadow:
@@ -686,386 +741,496 @@
     }
 
     @keyframes round1 {
-      0%  { left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      30% { left: -6em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      31% { left: -6em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      35% { left: 7em;  opacity: 0%;   transform: skewX(25deg) rotate(-25deg); }
-      45% { left: 7em;  opacity: 100%; transform: skewX(25deg) rotate(-25deg); }
-      100%{ left: -2em; opacity: 100%; transform: skewX(0deg) rotate(0deg); }
+      0% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+
+      30% {
+        left: -6em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      31% {
+        left: -6em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      35% {
+        left: 7em;
+        opacity: 0%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      45% {
+        left: 7em;
+        opacity: 100%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      100% {
+        left: -2em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
     }
 
     @keyframes round2 {
-      0%  { left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
-      75% { left: -7em; opacity: 100%; transform: skewX(-25deg) rotate(25deg); }
-      76% { left: -7em; opacity: 0%;   transform: skewX(-25deg) rotate(25deg); }
-      77% { left: 8em;  opacity: 0%;   transform: skewX(25deg) rotate(-25deg); }
-      80% { left: 8em;  opacity: 100%; transform: skewX(25deg) rotate(-25deg); }
-      100%{ left: 5em;  opacity: 100%; transform: skewX(0deg) rotate(0deg); }
+      0% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
+
+      75% {
+        left: -7em;
+        opacity: 100%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      76% {
+        left: -7em;
+        opacity: 0%;
+        transform: skewX(-25deg) rotate(25deg);
+      }
+
+      77% {
+        left: 8em;
+        opacity: 0%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      80% {
+        left: 8em;
+        opacity: 100%;
+        transform: skewX(25deg) rotate(-25deg);
+      }
+
+      100% {
+        left: 5em;
+        opacity: 100%;
+        transform: skewX(0deg) rotate(0deg);
+      }
     }
   </style>
 </head>
+
 <body class="loading">
 
-<!-- ══ PRELOADER ══ -->
-<div id="preloader">
-  <div class="earth">
-    <div class="earth-loader">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z" fill="#ffffff"></path>
-      </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <path transform="translate(100 100)" d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z" fill="#ffffff"></path>
-      </svg>
+  <!-- ══ PRELOADER ══ -->
+  <div id="preloader">
+    <div class="earth">
+      <div class="earth-loader">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M29.4,-17.4C33.1,1.8,27.6,16.1,11.5,31.6C-4.7,47,-31.5,63.6,-43,56C-54.5,48.4,-50.7,16.6,-41,-10.9C-31.3,-38.4,-15.6,-61.5,-1.4,-61C12.8,-60.5,25.7,-36.5,29.4,-17.4Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M31.7,-55.8C40.3,-50,45.9,-39.9,49.7,-29.8C53.5,-19.8,55.5,-9.9,53.1,-1.4C50.6,7.1,43.6,14.1,41.8,27.6C40.1,41.1,43.4,61.1,37.3,67C31.2,72.9,15.6,64.8,1.5,62.2C-12.5,59.5,-25,62.3,-31.8,56.7C-38.5,51.1,-39.4,37.2,-49.3,26.3C-59.1,15.5,-78,7.7,-77.6,0.2C-77.2,-7.2,-57.4,-14.5,-49.3,-28.4C-41.2,-42.4,-44.7,-63,-38.5,-70.1C-32.2,-77.2,-16.1,-70.8,-2.3,-66.9C11.6,-63,23.1,-61.5,31.7,-55.8Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M30.6,-49.2C42.5,-46.1,57.1,-43.7,67.6,-35.7C78.1,-27.6,84.6,-13.8,80.3,-2.4C76.1,8.9,61.2,17.8,52.5,29.1C43.8,40.3,41.4,53.9,33.7,64C26,74.1,13,80.6,2.2,76.9C-8.6,73.1,-17.3,59,-30.6,52.1C-43.9,45.3,-61.9,45.7,-74.1,38.2C-86.4,30.7,-92.9,15.4,-88.6,2.5C-84.4,-10.5,-69.4,-20.9,-60.7,-34.6C-52.1,-48.3,-49.8,-65.3,-40.7,-70C-31.6,-74.8,-15.8,-67.4,-3.2,-61.8C9.3,-56.1,18.6,-52.3,30.6,-49.2Z"
+            fill="#ffffff"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path transform="translate(100 100)"
+            d="M39.4,-66C48.6,-62.9,51.9,-47.4,52.9,-34.3C53.8,-21.3,52.4,-10.6,54.4,1.1C56.3,12.9,61.7,25.8,57.5,33.2C53.2,40.5,39.3,42.3,28.2,46C17,49.6,8.5,55.1,1.3,52.8C-5.9,50.5,-11.7,40.5,-23.6,37.2C-35.4,34,-53.3,37.5,-62,32.4C-70.7,27.4,-70.4,13.7,-72.4,-1.1C-74.3,-15.9,-78.6,-31.9,-73.3,-43C-68.1,-54.2,-53.3,-60.5,-39.5,-60.9C-25.7,-61.4,-12.9,-56,1.1,-58C15.1,-59.9,30.2,-69.2,39.4,-66Z"
+            fill="#ffffff"></path>
+        </svg>
+      </div>
+      <p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>
     </div>
-<p><span class="text-aqua">AQUA</span><span class="text-fold">FOLD</span></p>  </div>
-</div>
-
-<!-- ══ HEADER ══ -->
-<header class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;">
-      <img src="/images/aquafoldlogo.png" alt="logo" width="130" style="flex-shrink:0;">
-    </a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="aboutus.html">About us</a>
-      <a href="features.html">Features</a>
-      <a href="products.html">Products</a>
-      <a href="technology.html">Technology</a>
-      <a href="work-with-us.html">Work With Us</a>
-    </nav>
   </div>
-</header>
 
-<main>
-  <!-- ══ HERO / FAQ SECTION ══ -->
-  <section class="hero">
+  <!-- ══ HEADER ══ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" style="display:flex;align-items:center;gap:6px;">
+        <img src="/images/aquafoldlogo.png" alt="logo" width="130" style="flex-shrink:0;">
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="aboutus.html">About us</a>
+        <a href="features.html">Features</a>
+        <a href="products.html">Products</a>
+        <a href="technology.html">Technology</a>
+        <a href="work-with-us.html">Work With Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ══ HERO / FAQ SECTION ══ -->
+    <section class="hero">
+      <div class="container">
+        <div class="section-head" style="margin: 0 auto 56px auto; text-align: center;">
+          <span class="eyebrow">Help Desk</span>
+          <h2>Frequently Asked Questions</h2>
+          <p style="margin-top: 12px;">Everything you need to know about Aquafold, molded fiber packaging, and where
+            we're headed.</p>
+        </div>
+
+        <div class="faq-layout">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>What materials does Aquafold use?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Aquafold uses molded fiber derived from bagasse (sugarcane pulp) as the structural base, combined with
+                plant-based barrier coatings for moisture and oil resistance. The goal is to keep the system aligned
+                with compostability requirements. <br>
+                Bagasse is an agricultural byproduct generated during sugarcane processing — it's fibrous, renewable,
+                and available at industrial scale in India. The barrier coating is applied to the inner surface to make
+                the packaging suitable for food contact and liquid containment. <br>
+                The aim is to avoid petroleum-based plastics and use barrier systems that remain compatible with
+                compostability goals.
+
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>How does molded fiber compare to paper packaging?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Molded fiber is structurally stronger and more versatile than paper or cardboard: <br>
+                • Strength: Molded fiber is fiber-reinforced in three dimensions (like compressed papier-mache). Paper
+                is a flat sheet that tears easily. <br>
+                • Moisture resistance: With barrier coating, molded fiber holds liquids and withstands wet conditions.
+                Paper weakens and disintegrates when wet unless heavily coated with plastic or wax. <br>
+                • Formability: Molded fiber can be shaped into complex 3D forms (bottles, deep bowls, contoured trays).
+                Paper requires folding, gluing, or lamination and cannot be molded into seamless curved shapes. <br>
+                • Material source: Molded fiber uses agricultural waste (bagasse). Paper typically uses wood pulp with
+                higher material costs and supply chain complexity. <br>
+                Think of molded fiber as closer to plastic in performance, not paper.
+
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>Can molded fiber handle hot liquids?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Yes, with proper barrier coating and material formulation. <br>
+                Molded fiber packaging is being developed for hot beverages, soups, and hot food applications, with
+                temperature performance validated through testing. The fiber substrate and barrier system are designed
+                to maintain structural integrity and reduce liquid seepage. <br>
+                For extreme-heat applications (e.g., extended microwave use), additional material engineering may be
+                required. Our current product line is optimized for typical food-service and beverage use cases.
+
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>Are products commercially available?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Not yet. <br>
+                Aquafold is currently in the prototype and manufacturing setup phase. Our food-service packaging line
+                (plates, bowls, containers) is targeting commercial availability by late 2026, pending factory
+                commissioning and compliance completion. <br>
+                The 1-litre molded fiber bottle is in advanced design and structural validation — prototype completion
+                is targeted for Q3 2026, with commercial production following after validation and tooling readiness.
+                <br>
+                You can sign up for product launch updates or express interest in pilot orders through our contact form.
+
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>Is the bottle in production?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                No. <br>
+                The Aquafold 1-litre molded fiber bottle (The Vessel) is currently undergoing ANSYS/Abaqus structural
+                simulation and design validation. This includes drop testing, compression and stacking analysis,
+                sidewall deformation modeling, and moisture sensitivity studies. <br>
+                Prototype fabrication is targeted for July 2026, with pilot production and brand partner testing planned
+                for late 2026 and early 2027. Commercial-scale bottle production will begin once structural validation
+                is complete and manufacturing tooling is finalized. <br>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>What stage is Aquafold currently in?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Early-stage. Prototype and manufacturing setup phase. <br>
+                Here's where we are: <br>
+                • Factory setup: Commissioning production facility in Karnataka (September 2026 target launch) <br>
+                • Product development: Food-service line in final prototyping; bottle in structural validation <br>
+                • Compliance: Preparing FSSAI certification, KSPCB clearance, and compostability testing documentation
+                <br>
+                • Go-to-market: Engaging initial B2B customers — cloud kitchens, QSR chains, beverage brands <br>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>Are you seeking investors or partners?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Yes. <br>
+                Aquafold is open to: <br>
+                • Equity investors: Pre-seed and seed-stage investors aligned with deep-tech manufacturing and
+                sustainable materials <br>
+                • Co-manufacturing partners: Experienced pulp molding manufacturers interested in bagasse-based
+                production <br>
+                • Brand partners: Food-service businesses, beverage companies, or distributors interested in pilot
+                programs or offtake agreements <br>
+                • Material technology collaborators: Barrier coating developers, compostability testing labs,
+                agricultural waste processors
+                For inquiries: contact@aquafold.in <br>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>What applications are being developed?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Current focus — Food-service packaging: <br>
+                • The Carry: Takeout containers and clamshell boxes <br>
+                • The Pour: Bowls and serving vessels <br>
+                • The Serve: Plates and flat trays <br>
+                • The Gather: Large-format catering containers <br>
+                Active development — Liquid packaging: <br>
+                • The Vessel: 1-litre molded fiber bottle (expansion to 500ml and other formats planned) <br>
+                Future roadmap: Cold-chain compatible packaging, custom B2B solutions, protective packaging for non-food
+                applications. All products are designed for commercial-scale manufacturing, not artisanal or limited-run
+                production.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>What certifications is Aquafold pursuing?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Required / for commercial launch <br>
+                • FSSAI: Food Safety and Standards Authority of India — food contact material compliance <br>
+                • KSPCB: Karnataka State Pollution Control Board — environmental clearance for manufacturing operations
+                <br>
+                • Factory License: Manufacturing operations compliance <br>
+                • GST and Udyam Registration: Business registration and tax compliance <br>
+                Strongly Recommended (in progress) <br>
+                • Compostability certification: TUV Austria OK Compost or BIS IS 17088 (Indian standard) <br>
+                • Third-party migration testing: Supports food-contact safety validation <br>
+                Future Certifications <br>
+                • FSC: Chain-of-custody for sustainable fiber sourcing <br>
+                • ISO 9001: Quality management system certification <br>
+                • EPR Registration: Extended Producer Responsibility compliance
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <h3>How should used Aquafold packaging be disposed?</h3>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-content-inner">
+                Best disposal method: Industrial composting or agricultural reintegration, depending on local
+                infrastructure. <br>
+                Aquafold packaging is designed for compostability and can break down under composting conditions. Here's
+                how to dispose of it: <br>
+                • Industrial composting facilities: Drop off at municipal composting sites or commercial composting
+                programs (preferred method for urban areas). <br>
+                • Home composting: Tear into smaller pieces and add to backyard compost bins. Works best in active
+                compost piles with regular turning. <br>
+                • Agricultural reintegration: Can be returned to agricultural waste streams for soil amendment if
+                programs are available in your area.
+                Not Recommended <br>
+                • Landfill: While it will eventually decompose (unlike plastic), composting is faster and more
+                beneficial. <br>
+                • Recycling bin: Molded fiber is not processed through paper recycling streams — it's designed to
+                compost, not recycle. <br>
+                • Incineration: Unnecessary and wasteful — composting captures the material's value. <br>
+                Look for compostable disposal bins or contact local waste management services to find composting options
+                in your area.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
     <div class="container">
-      <div class="section-head" style="margin: 0 auto 56px auto; text-align: center;">
-        <span class="eyebrow">Help Desk</span>
-        <h2>Frequently Asked Questions</h2>
-        <p style="margin-top: 12px;">Everything you need to know about Aquafold, molded fiber packaging, and where we're headed.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
+            <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
+          </div>
+          <p>
+            Purity, Beautifully Engineered.<br>
+            Designed in INDIA.<br>
+            Made for everywhere.
+          </p>
+          <div class="footer-social">
+            <div class="social-circle">
+              <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png"
+                  alt="photo" width="20"></a>
+            </div>
+            <div class="social-circle">
+              <a href="mailto:aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo"
+                  width="25"></a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank"
+                class="social-btn"> <img src="/images/insta.png" alt="photo" width="29"> </a>
+            </div>
+            <div class="social-circle">
+              <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img
+                  src="/images/linkedin.png" alt="photo" width="30"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="products.html">The Carry — Clamshell Boxes</a>
+          <a href="products.html">The Pour — Beverage Holders</a>
+          <a href="products.html">The Gather — Cutlery</a>
+          <a href="products.html">The Serve — Bowls & Plates</a>
+          <a href="products.html">The Vessel — Bottles</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="aboutus.html#about-us">About Us</a>
+          <a href="aboutus.html#our-mission">Our Mission</a>
+          <a href="whyaf.html">Why Aquafold</a>
+          <a href="work-with-us.html#partners">Partnership</a>
+          <a href="work-with-us.html#investors">Investors</a>
+          <a href="work-with-us.html">Careers</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="faq.html">FAQ</a>
+          <a href="work-with-us.html">Contact Us</a>
+          <a href="work-with-us.html">Privacy Policy</a>
+          <a href="work-with-us.html">Terms of Service</a>
+        </div>
       </div>
 
-      <div class="faq-layout">
-        <!-- FAQ 1 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>What materials does Aquafold use?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              Aquafold uses molded fiber derived from bagasse (sugarcane pulp) as the structural base, combined with plant-based barrier coatings for moisture and oil resistance. The goal is to keep the system aligned with compostability requirements. <br>
-              Bagasse is an agricultural byproduct generated during sugarcane processing — it's fibrous, renewable, and available at industrial scale in India. The barrier coating is applied to the inner surface to make the packaging suitable for food contact and liquid containment. <br>
-              The aim is to avoid petroleum-based plastics and use barrier systems that remain compatible with compostability goals.
-
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>How does molded fiber compare to paper packaging?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              Molded fiber is structurally stronger and more versatile than paper or cardboard: <br>
-              •	Strength: Molded fiber is fiber-reinforced in three dimensions (like compressed papier-mache). Paper is a flat sheet that tears easily. <br>
-              •	Moisture resistance: With barrier coating, molded fiber holds liquids and withstands wet conditions. Paper weakens and disintegrates when wet unless heavily coated with plastic or wax. <br>
-              •	Formability: Molded fiber can be shaped into complex 3D forms (bottles, deep bowls, contoured trays). Paper requires folding, gluing, or lamination and cannot be molded into seamless curved shapes. <br>
-              •	Material source: Molded fiber uses agricultural waste (bagasse). Paper typically uses wood pulp with higher material costs and supply chain complexity. <br>
-              Think of molded fiber as closer to plastic in performance, not paper.
-
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>Can molded fiber handle hot liquids?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              Yes, with proper barrier coating and material formulation. <br>
-              Molded fiber packaging is being developed for hot beverages, soups, and hot food applications, with temperature performance validated through testing. The fiber substrate and barrier system are designed to maintain structural integrity and reduce liquid seepage. <br>
-              For extreme-heat applications (e.g., extended microwave use), additional material engineering may be required. Our current product line is optimized for typical food-service and beverage use cases.
-
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>Are products commercially available?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              Not yet. <br>
-              Aquafold is currently in the prototype and manufacturing setup phase. Our food-service packaging line (plates, bowls, containers) is targeting commercial availability by late 2026, pending factory commissioning and compliance completion. <br>
-              The 1-litre molded fiber bottle is in advanced design and structural validation — prototype completion is targeted for Q3 2026, with commercial production following after validation and tooling readiness. <br>
-              You can sign up for product launch updates or express interest in pilot orders through our contact form.
-
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>Is the bottle in production?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              No. <br>
-              The Aquafold 1-litre molded fiber bottle (The Vessel) is currently undergoing ANSYS/Abaqus structural simulation and design validation. This includes drop testing, compression and stacking analysis, sidewall deformation modeling, and moisture sensitivity studies. <br>
-              Prototype fabrication is targeted for July 2026, with pilot production and brand partner testing planned for late 2026 and early 2027. Commercial-scale bottle production will begin once structural validation is complete and manufacturing tooling is finalized. <br>
-            </div>
-          </div>
-        </div>
-
-                <!-- FAQ 6 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>What stage is Aquafold currently in?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              Early-stage. Prototype and manufacturing setup phase. <br>
-              Here's where we are: <br>
-              •	Factory setup: Commissioning production facility in Karnataka (September 2026 target launch) <br>
-              •	Product development: Food-service line in final prototyping; bottle in structural validation <br>
-              •	Compliance: Preparing FSSAI certification, KSPCB clearance, and compostability testing documentation <br>
-              •	Go-to-market: Engaging initial B2B customers — cloud kitchens, QSR chains, beverage brands <br>
-            </div>
-          </div>
-        </div>
-
-                        <!-- FAQ 7 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>Are you seeking investors or partners?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              Yes. <br>
-              Aquafold is open to: <br>
-              •	Equity investors: Pre-seed and seed-stage investors aligned with deep-tech manufacturing and sustainable materials <br>
-              •	Co-manufacturing partners: Experienced pulp molding manufacturers interested in bagasse-based production <br>
-              •	Brand partners: Food-service businesses, beverage companies, or distributors interested in pilot programs or offtake agreements <br>
-              •	Material technology collaborators: Barrier coating developers, compostability testing labs, agricultural waste processors
-              For inquiries: contact@aquafold.in <br>
-            </div>
-          </div>
-        </div>
-
-                        <!-- FAQ 8 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>What applications are being developed?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              Current focus — Food-service packaging: <br>
-              •	The Carry: Takeout containers and clamshell boxes <br>
-              •	The Pour: Bowls and serving vessels <br>
-              •	The Serve: Plates and flat trays <br>
-              •	The Gather: Large-format catering containers <br>
-              Active development — Liquid packaging: <br>
-              •	The Vessel: 1-litre molded fiber bottle (expansion to 500ml and other formats planned) <br> 
-              Future roadmap: Cold-chain compatible packaging, custom B2B solutions, protective packaging for non-food applications. All products are designed for commercial-scale manufacturing, not artisanal or limited-run production.
-            </div>
-          </div>
-        </div>
-
-                        <!-- FAQ 9 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>What certifications is Aquafold pursuing?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              Required / for commercial launch <br>
-              •	FSSAI: Food Safety and Standards Authority of India — food contact material compliance <br>
-              •	KSPCB: Karnataka State Pollution Control Board — environmental clearance for manufacturing operations <br>
-              •	Factory License: Manufacturing operations compliance <br>
-              •	GST and Udyam Registration: Business registration and tax compliance <br>
-              Strongly Recommended (in progress) <br>
-              •	Compostability certification: TUV Austria OK Compost or BIS IS 17088 (Indian standard) <br>
-              •	Third-party migration testing: Supports food-contact safety validation <br>
-              Future Certifications <br>
-              •	FSC: Chain-of-custody for sustainable fiber sourcing <br>
-              •	ISO 9001: Quality management system certification <br>
-              •	EPR Registration: Extended Producer Responsibility compliance
-            </div>
-          </div>
-        </div>
-
-                        <!-- FAQ 10 -->
-        <div class="faq-item">
-          <button class="faq-trigger">
-            <h3>How should used Aquafold packaging be disposed?</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-content">
-            <div class="faq-content-inner">
-              Best disposal method: Industrial composting or agricultural reintegration, depending on local infrastructure. <br>
-              Aquafold packaging is designed for compostability and can break down under composting conditions. Here's how to dispose of it: <br>
-              • Industrial composting facilities: Drop off at municipal composting sites or commercial composting programs (preferred method for urban areas). <br>
-              • Home composting: Tear into smaller pieces and add to backyard compost bins. Works best in active compost piles with regular turning. <br>
-              • Agricultural reintegration: Can be returned to agricultural waste streams for soil amendment if programs are available in your area.
-              Not Recommended <br>
-              •	Landfill: While it will eventually decompose (unlike plastic), composting is faster and more beneficial. <br>
-              •	Recycling bin: Molded fiber is not processed through paper recycling streams — it's designed to compost, not recycle. <br>
-              •	Incineration: Unnecessary and wasteful — composting captures the material's value. <br>
-              Look for compostable disposal bins or contact local waste management services to find composting options in your area.
-            </div>
-          </div>
-        </div>
+      <div class="footer-bottom">
+        <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
       </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<!-- ══ FOOTER ══ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="brand" style="color:#fff; font-size:2rem; margin-bottom:18px;">
-          <a href="index.html"><img src="/images/aquafoldlogo.png" alt="photo" width="250"></a>
-        </div>
-        <p>
-          Purity, Beautifully Engineered.<br>
-          Designed in INDIA.<br>
-          Made for everywhere.
-        </p>
-        <div class="footer-social">
-          <div class="social-circle">
-            <a href="https://wa.me/919008287872" target="_blank" class="social-btn"><img src="/images/contact.png" alt="photo" width="20"></a>
-          </div>
-          <div class="social-circle">
-            <a href="mailto:aquafold.in@gmail.com" class="social-btn"><img src="/images/gmail.png" alt="photo" width="25"></a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.instagram.com/aquafold.in?igsh=MXBpcTY1MjVhYnY0YQ==" target="_blank" class="social-btn"> <img src="/images/insta.png" alt="photo" width="29"> </a>
-          </div>
-          <div class="social-circle">
-            <a href="https://www.linkedin.com/company/aquafold-pvt-ltd/" target="_blank" class="social-btn"><img src="/images/linkedin.png" alt="photo" width="30"></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Products</h4>
-        <a href="products.html">The Carry — Clamshell Boxes</a>
-        <a href="products.html">The Pour — Beverage Holders</a>
-        <a href="products.html">The Gather — Cutlery</a>
-        <a href="products.html">The Serve — Bowls & Plates</a>
-        <a href="products.html">The Vessel — Bottles</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="aboutus.html#about-us">About Us</a>
-        <a href="aboutus.html#our-mission">Our Mission</a>
-        <a href="whyaf.html">Why Aquafold</a>
-        <a href="work-with-us.html#partners">Partnership</a>
-        <a href="work-with-us.html#investors">Investors</a>
-        <a href="work-with-us.html">Careers</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Support</h4>
-        <a href="faq.html">FAQ</a>
-        <a href="work-with-us.html">Contact Us</a>
-        <a href="work-with-us.html">Privacy Policy</a>
-        <a href="work-with-us.html">Terms of Service</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div>© 2026 Aquafold. All rights reserved. Made in India.</div>
-    </div>
-  </div>
-</footer>
-
-<!-- ── Navigation Toggle Script ── -->
-<script>
-  const toggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  toggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    toggle.classList.toggle('open', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
+  <!-- ── Navigation Toggle Script ── -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
     });
-  });
-</script>
-
-<!-- ── Accordion Collapse Logic Script ── -->
-<script>
-  document.querySelectorAll('.faq-trigger').forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      const parent = trigger.parentElement;
-      const content = trigger.nextElementSibling;
-      const isActive = parent.classList.contains('active');
-      
-      // Collapse all opened items smoothly
-      document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-        item.querySelector('.faq-content').style.maxHeight = null;
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
       });
+    });
+  </script>
 
-      if (!isActive) {
-        parent.classList.add('active');
-        content.style.maxHeight = content.scrollHeight + "px";
+  <!-- ── Accordion Collapse Logic Script ── -->
+  <script>
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const parent = trigger.parentElement;
+        const content = trigger.nextElementSibling;
+        const isActive = parent.classList.contains('active');
+
+        // Collapse all opened items smoothly
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('.faq-content').style.maxHeight = null;
+        });
+
+        if (!isActive) {
+          parent.classList.add('active');
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+
+  <!-- ── Preloader Animation Dismissal Script ── -->
+  <script>
+    (function () {
+      const pl = document.getElementById('preloader');
+      function dismiss() {
+        pl.classList.add('hide');
+        document.body.classList.remove('loading');
       }
-    });
-  });
-</script>
-
-<!-- ── Preloader Animation Dismissal Script ── -->
-<script>
-  (function () {
-    const pl = document.getElementById('preloader');
-    function dismiss() {
-      pl.classList.add('hide');
-      document.body.classList.remove('loading');
-    }
-    window.addEventListener('load', function () {
-      const elapsed = performance.now();
-      const remaining = Math.max(0, 2800 - elapsed);
-      setTimeout(dismiss, remaining);
-    });
-    setTimeout(dismiss, 4000);
-  })();
-</script>
+      window.addEventListener('load', function () {
+        const elapsed = performance.now();
+        const remaining = Math.max(0, 2800 - elapsed);
+        setTimeout(dismiss, remaining);
+      });
+      setTimeout(dismiss, 4000);
+    })();
+  </script>
 </body>
+
 </html>
